@@ -515,7 +515,7 @@
                             </svg>
                         </a>
 
-                        <a href="https://www.linkedin.com/company/physiqdynamic/posts/?feedView=all" target="_blank"
+                        <a href="https://www.linkedin.com/in/abdullah-al-5b008b3b7/" target="_blank"
                             rel="noopener noreferrer"
                             class="w-10 h-10 rounded-full border border-white/15 flex items-center justify-center hover:border-[#FF9F45]/60 hover:bg-[#FF9F45]/10 transition-all duration-300">
                             <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
