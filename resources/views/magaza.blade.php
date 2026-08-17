@@ -73,7 +73,7 @@
         animation: m-fade-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
     }
 
-    /* Scroll-reveal kartlar */
+
     .m-card {
         opacity: 0;
         transform: translateY(24px);
@@ -120,13 +120,13 @@
         animation: m-cart-bump 0.45s ease;
     }
 
-    /* Sepete eklendi checkmark geçişi */
+
     .m-btn-label,
     .m-btn-check {
         transition: opacity 0.25s ease, transform 0.25s ease;
     }
 
-    
+
     @keyframes m-card-added-pulse {
         0% {
             box-shadow: 0 0 0 0 rgba(47, 111, 237, 0.35);
@@ -145,7 +145,7 @@
         animation: m-card-added-pulse 0.9s ease-out;
     }
 
-    /* İndirim şeridi parıltısı */
+
     @keyframes m-shine {
         0% {
             transform: translateX(-120%) skewX(-15deg);
@@ -174,7 +174,7 @@
 </style>
 
 @php
-// Sayfa ilk yüklendiğinde navbar'daki sepet rakamını gerçek session sepetinden başlatıyoruz.
+
 $sepetAdet = collect(session('sepet', []))->sum('adet');
 @endphp
 
@@ -192,7 +192,7 @@ $sepetAdet = collect(session('sepet', []))->sum('adet');
         }
     }">
 
-     Navbar 
+
     <nav
         class="al-navbar sticky top-4 z-50 max-w-6xl mx-auto flex items-center justify-between px-6 md:px-8 py-4 rounded-full mt-4 border border-white/60">
         <a href="{{ route('home') }}"
@@ -234,7 +234,7 @@ $sepetAdet = collect(session('sepet', []))->sum('adet');
         </div>
 
         <div class="flex items-center gap-3">
-             Sepet Butonu: gerçek cart-drawer Livewire bileşenini açar 
+            Sepet Butonu: gerçek cart-drawer Livewire bileşenini açar
             <button type="button" @click="Livewire.dispatch('cart-open')"
                 class="relative w-11 h-11 rounded-full bg-white/70 border border-[#0B2545]/10 flex items-center justify-center hover:bg-white transition-colors duration-300">
                 <svg :class="bump ? 'm-cart-bump' : ''" class="w-5 h-5 text-[#0B2545]" fill="none" stroke="currentColor"
@@ -253,7 +253,7 @@ $sepetAdet = collect(session('sepet', []))->sum('adet');
         </div>
     </nav>
 
-     Hero 
+
     <header class="relative py-24 md:py-28 px-6 overflow-hidden">
         <div class="absolute inset-0 al-grid-bg pointer-events-none"></div>
         <div
@@ -276,7 +276,7 @@ $sepetAdet = collect(session('sepet', []))->sum('adet');
         </div>
     </header>
 
-     Filtre 
+
     <div class="max-w-5xl mx-auto px-6 mb-14">
         <div class="flex flex-wrap items-center justify-center gap-3">
             <button @click="active = 'all'"
@@ -312,7 +312,6 @@ $sepetAdet = collect(session('sepet', []))->sum('adet');
         </div>
     </div>
 
-     Ürün Grid 
     <section class="max-w-7xl mx-auto px-6 pb-32">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
@@ -466,10 +465,10 @@ $sepetAdet = collect(session('sepet', []))->sum('adet');
         </div>
     </section>
 
-    
+
     <livewire:cart-drawer />
 
-     Footer 
+
     <footer class="relative bg-[#0B2545] text-white overflow-hidden">
         <div class="absolute inset-0 pointer-events-none"
             style="background-image: linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px); background-size: 56px 56px; mask-image: radial-gradient(ellipse 80% 60% at 50% 50%, black 40%, transparent 100%);">
@@ -522,14 +521,11 @@ $sepetAdet = collect(session('sepet', []))->sum('adet');
 </div>
 
 <script>
-    
     document.addEventListener('alpine:init', () => {
         Alpine.store('cart', { count: {{ $sepetAdet }} });
     });
 
-    // cart-drawer bileşeni içinde ürün artırılıp azaltıldığında (drawer açıkken) navbar rakamını
-    // gerçek (sunucudan gelen) veriyle senkron tutar. cart-drawer.blade.php dosyasının render
-    // çıktısını okur, iş mantığına dokunmaz.
+    
     document.addEventListener('livewire:init', () => {
         Livewire.hook('morph.updated', ({ component }) => {
             if (!component || component.name !== 'cart-drawer') return;

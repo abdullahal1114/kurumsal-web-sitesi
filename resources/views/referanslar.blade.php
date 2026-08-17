@@ -39,7 +39,7 @@
 
     <div class="min-h-screen bg-gradient-to-b from-[#EAF4FF] via-[#DCEEFF] to-[#EAF4FF]">
 
-         Navbar 
+
         <nav
             class="al-navbar sticky top-4 z-50 max-w-6xl mx-auto flex items-center justify-between px-6 md:px-8 py-4 rounded-full mt-4 border border-white/60">
             <div
@@ -49,7 +49,7 @@
 
             <div class="hidden md:flex items-center gap-9 al-font-mono text-xs tracking-[0.15em] text-[#0B2545]/60">
 
-                 KURUMSAL Dropdown 
+
                 <div class="relative group">
                     <a href="{{ route('kurumsal') }}"
                         class="flex items-center gap-1 hover:text-[#0B2545] hover:opacity-100 opacity-70 transition-all duration-300 py-3 cursor-pointer">
@@ -61,7 +61,7 @@
                         </svg>
                     </a>
 
-                     Dropdown Panel 
+
                     <div class="absolute top-full left-1/2 -translate-x-1/2 pt-2 w-56
                                 opacity-0 invisible translate-y-2
                                 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0

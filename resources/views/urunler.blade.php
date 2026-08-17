@@ -97,7 +97,7 @@
         transition: transform 0.3s ease;
     }
 
-    /* Teklif Al butonu için görsel geri bildirim */
+
     .p-cta-btn {
         cursor: pointer;
         background: none;
@@ -113,7 +113,7 @@
 <div class="min-h-screen bg-gradient-to-b from-[#EAF4FF] via-[#DCEEFF] to-[#EAF4FF] al-font-body text-[#0B2545] selection:bg-[#FFB347] selection:text-[#0A1830]"
     x-data="{ active: 'all' }">
 
-     Navbar 
+
     <nav
         class="al-navbar sticky top-4 z-50 max-w-6xl mx-auto flex items-center justify-between px-6 md:px-8 py-4 rounded-full mt-4 border border-white/60">
         <a href="{{ route('home') }}"
@@ -160,7 +160,7 @@
         </button>
     </nav>
 
-     Hero 
+
     <header class="relative py-24 md:py-28 px-6 overflow-hidden">
         <div class="absolute inset-0 al-grid-bg pointer-events-none"></div>
         <div
@@ -183,7 +183,7 @@
         </div>
     </header>
 
-     Filtre Pilleri 
+
     <div class="max-w-5xl mx-auto px-6 mb-14">
         <div class="flex flex-wrap items-center justify-center gap-3">
             <button @click="active = 'all'"
@@ -219,7 +219,6 @@
         </div>
     </div>
 
-     Ürün Grid 
     <section class="max-w-7xl mx-auto px-6 pb-32">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
@@ -334,7 +333,7 @@
         </div>
     </section>
 
-     Footer 
+
     <footer class="relative bg-[#0B2545] text-white overflow-hidden">
         <div class="absolute inset-0 pointer-events-none"
             style="background-image: linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px); background-size: 56px 56px; mask-image: radial-gradient(ellipse 80% 60% at 50% 50%, black 40%, transparent 100%);">

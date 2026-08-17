@@ -36,7 +36,8 @@
         box-shadow: 0 8px 30px -12px rgba(11, 37, 69, 0.15);
     }
 
-    /* Giriş Animasyonları */
+
+
     @keyframes fadeInUp {
         from {
             opacity: 0;
@@ -82,7 +83,8 @@
     class="min-h-screen bg-gradient-to-b from-[#EAF4FF] via-[#DCEEFF] to-[#EAF4FF] al-font-body text-[#0B2545] relative overflow-hidden">
     <div class="absolute inset-0 al-grid-bg pointer-events-none"></div>
 
-     Navbar 
+
+
     <nav
         class="al-navbar sticky top-4 z-50 max-w-6xl mx-auto flex items-center justify-between px-6 md:px-8 py-4 rounded-full mt-4 border border-white/60">
         <a href="{{ route('home') }}"
@@ -130,13 +132,13 @@
         </button>
     </nav>
 
-     Main Content Area 
+
     <div class="max-w-6xl mx-auto relative z-10 pt-16 pb-20 px-6">
 
-         İki Sütunlu Biz Kimiz Bölümü 
+
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start mt-8">
 
-             Sol Sütun (Metinler) 
+
             <div class="lg:col-span-7 animate-fade-in-up">
                 <span
                     class="al-font-mono text-xs font-bold tracking-[0.25em] text-[#FF9F45] bg-[#FF9F45]/10 px-4 py-2 rounded-full">
@@ -190,7 +192,7 @@
                 </div>
             </div>
 
-             Sağ Sütun (Premium Görsel / Özellik Kartı) 
+
             <div class="lg:col-span-5 animate-fade-in-up animate-delay-100 lg:sticky lg:top-28">
                 <div
                     class="relative group rounded-3xl overflow-hidden shadow-2xl border border-white/50 bg-[#0B2545] aspect-[4/5] min-h-[400px]">
@@ -198,7 +200,7 @@
                         class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-[1.2s] ease-out opacity-85">
                     <div class="absolute inset-0 bg-gradient-to-t from-[#0B2545] via-[#0B2545]/25 to-transparent"></div>
 
-                     Floating glassmorphic badge 
+                    Floating glassmorphic badge
                     <div
                         class="absolute bottom-8 left-6 right-6 bg-white/70 backdrop-blur-md border border-white/60 p-6 rounded-2xl shadow-xl hover:-translate-y-1 transition-transform duration-300">
                         <span
@@ -212,16 +214,16 @@
 
         </div>
 
-         Üçlü Değerler Bölümü 
+
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-24 animate-fade-in-up animate-delay-200">
-             Card 1: İnovasyon 
+
             <div
                 class="group bg-white/60 backdrop-blur-sm border border-[#0B2545]/10 rounded-2xl p-8 shadow-sm hover:shadow-xl hover:shadow-[#FF9F45]/5 hover:-translate-y-1 hover:border-[#FF9F45]/30 transition-all duration-300 flex flex-col justify-between">
                 <div>
                     <div class="flex items-center justify-between mb-6">
                         <div
                             class="w-12 h-12 rounded-xl bg-[#FF9F45]/10 text-[#FF9F45] flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                             SVG İnovasyon 
+                            SVG İnovasyon
                             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M13 10V3L4 14h7v7l9-11h-7z" />
@@ -237,14 +239,14 @@
                 </div>
             </div>
 
-             Card 2: Güvenilirlik 
+
             <div
                 class="group bg-white/60 backdrop-blur-sm border border-[#0B2545]/10 rounded-2xl p-8 shadow-sm hover:shadow-xl hover:shadow-[#2F6FED]/5 hover:-translate-y-1 hover:border-[#2F6FED]/30 transition-all duration-300 flex flex-col justify-between">
                 <div>
                     <div class="flex items-center justify-between mb-6">
                         <div
                             class="w-12 h-12 rounded-xl bg-[#2F6FED]/10 text-[#2F6FED] flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                             SVG Güvenilirlik 
+                            SVG Güvenilirlik
                             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
@@ -260,14 +262,14 @@
                 </div>
             </div>
 
-             Card 3: Şeffaflık 
+
             <div
                 class="group bg-white/60 backdrop-blur-sm border border-[#0B2545]/10 rounded-2xl p-8 shadow-sm hover:shadow-xl hover:shadow-[#0B2545]/5 hover:-translate-y-1 hover:border-[#0B2545]/30 transition-all duration-300 flex flex-col justify-between">
                 <div>
                     <div class="flex items-center justify-between mb-6">
                         <div
                             class="w-12 h-12 rounded-xl bg-[#0B2545]/10 text-[#0B2545] flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                             SVG Şeffaflık 
+                            SVG Şeffaflık
                             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -286,7 +288,7 @@
             </div>
         </div>
 
-         Rakamlarla AL Technology 
+
         <div class="mt-28 animate-fade-in-up animate-delay-300">
             <p class="al-font-mono text-xs tracking-[0.3em] text-[#FF9F45] mb-3">RAKAMLARLA</p>
             <h2 class="al-font-display text-3xl md:text-4xl font-extrabold text-[#0B2545] mb-10">
@@ -325,7 +327,7 @@
             </div>
         </div>
 
-         Yolculuğumuz / Zaman Çizelgesi 
+
         <div class="mt-28 animate-fade-in-up animate-delay-400">
             <p class="al-font-mono text-xs tracking-[0.3em] text-[#FF9F45] mb-3">YOLCULUĞUMUZ</p>
             <h2 class="al-font-display text-3xl md:text-4xl font-extrabold text-[#0B2545] mb-10">
@@ -333,12 +335,12 @@
             </h2>
 
             <div class="relative pl-10 md:pl-12">
-                 Timeline Line with perfectly calculated alignment 
+
                 <div class="absolute left-4 md:left-5 top-2 bottom-2 w-0.5 bg-[#0B2545]/15"></div>
 
-                 Timeline Item 1 
+
                 <div class="relative mb-12 group">
-                     Dot perfectly centered at 17px on mobile, 21px on desktop 
+
                     <span
                         class="absolute left-2 md:left-3 top-1.5 w-4.5 h-4.5 rounded-full bg-white border-4 border-[#FF9F45] shadow-md group-hover:scale-125 transition-transform duration-300 z-10"></span>
                     <div class="pl-4 ml-3">
@@ -353,9 +355,9 @@
                     </div>
                 </div>
 
-                 Timeline Item 2 
+
                 <div class="relative mb-12 group">
-                     Dot perfectly centered at 17px on mobile, 21px on desktop 
+
                     <span
                         class="absolute left-2 md:left-3 top-1.5 w-4.5 h-4.5 rounded-full bg-white border-4 border-[#2F6FED] shadow-md group-hover:scale-125 transition-transform duration-300 z-10"></span>
                     <div class="pl-4 ml-3">
@@ -370,9 +372,9 @@
                     </div>
                 </div>
 
-                 Timeline Item 3 
+
                 <div class="relative mb-12 group">
-                     Dot perfectly centered at 17px on mobile, 21px on desktop 
+
                     <span
                         class="absolute left-2 md:left-3 top-1.5 w-4.5 h-4.5 rounded-full bg-white border-4 border-[#0B2545] shadow-md group-hover:scale-125 transition-transform duration-300 z-10"></span>
                     <div class="pl-4 ml-3">
@@ -388,9 +390,9 @@
                     </div>
                 </div>
 
-                 Timeline Item 4 
+
                 <div class="relative group">
-                     Dot perfectly centered at 17px on mobile, 21px on desktop 
+
                     <span
                         class="absolute left-2 md:left-3 top-1.5 w-4.5 h-4.5 rounded-full bg-white border-4 border-[#FF9F45] shadow-md group-hover:scale-125 transition-transform duration-300 z-10"></span>
                     <div class="pl-4 ml-3">
@@ -407,7 +409,7 @@
             </div>
         </div>
 
-         Kapanış CTA 
+
         <div
             class="mt-28 bg-[#0B2545] rounded-3xl p-12 md:p-16 text-center relative overflow-hidden animate-fade-in-up animate-delay-400 border border-white/5 shadow-2xl">
             <div class="absolute inset-0 al-grid-bg pointer-events-none opacity-25"></div>

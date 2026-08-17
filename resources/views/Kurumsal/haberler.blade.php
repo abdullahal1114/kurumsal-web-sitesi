@@ -61,7 +61,7 @@
 
 <div class="min-h-screen bg-gradient-to-b from-[#EAF4FF] via-[#DCEEFF] to-[#EAF4FF] al-font-body text-[#0B2545]">
 
-     Navbar 
+
     <nav
         class="al-navbar sticky top-4 z-50 max-w-6xl mx-auto flex items-center justify-between px-6 md:px-8 py-4 rounded-full mt-4 border border-white/60">
         <a href="{{ route('home') }}"
@@ -123,7 +123,7 @@
                 </p>
             </div>
 
-             Kategori filtreleri 
+
             <div class="flex flex-wrap gap-2 al-font-mono text-[11px] tracking-widest">
                 <button type="button" @click="cat = 'tumu'" :class="cat === 'tumu' ? 'active' : 'text-[#0B2545]/60'"
                     class="al-filter-pill cursor-pointer rounded-full px-4 py-2 border border-[#0B2545]/10 bg-white/70 hover:bg-white">TÜMÜ</button>
@@ -142,7 +142,7 @@
             </div>
         </div>
 
-         Manşet haber 
+
         <div
             class="animate-news-card mb-8 relative bg-[#0B2545] rounded-3xl overflow-hidden shadow-xl shadow-[#0B2545]/10 group cursor-pointer">
             <div class="absolute inset-0 al-featured-grid opacity-60 pointer-events-none"></div>
@@ -176,7 +176,7 @@
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-             Haber: Edge Sunucu (ALTYAPI) 
+
             <div x-show="cat === 'tumu' || cat === 'altyapi'" x-transition.opacity.duration.300ms
                 class="animate-news-card bg-white/70 backdrop-blur-md border border-[#0B2545]/10 rounded-3xl overflow-hidden shadow-lg hover:shadow-xl hover:border-[#2F6FED]/30 hover:-translate-y-1 transition-all duration-500 group flex flex-col justify-between">
                 <div class="p-8">
@@ -199,7 +199,7 @@
                 </div>
             </div>
 
-             Haber: AL.AI Otomasyon (YAPAY ZEKA) 
+
             <div x-show="cat === 'tumu' || cat === 'yapay-zeka'" x-transition.opacity.duration.300ms
                 class="animate-news-card bg-white/70 backdrop-blur-md border border-[#0B2545]/10 rounded-3xl overflow-hidden shadow-lg hover:shadow-xl hover:border-[#2F6FED]/30 hover:-translate-y-1 transition-all duration-500 group flex flex-col justify-between"
                 style="animation-delay: 0.1s;">
@@ -223,7 +223,7 @@
                 </div>
             </div>
 
-             Haber: Yeşil Kod (AR-GE) 
+
             <div x-show="cat === 'tumu' || cat === 'ar-ge'" x-transition.opacity.duration.300ms
                 class="animate-news-card bg-white/70 backdrop-blur-md border border-[#0B2545]/10 rounded-3xl overflow-hidden shadow-lg hover:shadow-xl hover:border-[#2F6FED]/30 hover:-translate-y-1 transition-all duration-500 group flex flex-col justify-between"
                 style="animation-delay: 0.2s;">
@@ -247,7 +247,7 @@
                 </div>
             </div>
 
-             Haber: ISO 27001 (Kategorisiz - sadece Tümü) 
+
             <div x-show="cat === 'tumu'" x-transition.opacity.duration.300ms
                 class="animate-news-card bg-white/70 backdrop-blur-md border border-[#0B2545]/10 rounded-3xl overflow-hidden shadow-lg hover:shadow-xl hover:border-[#2F6FED]/30 hover:-translate-y-1 transition-all duration-500 group flex flex-col justify-between"
                 style="animation-delay: 0.3s;">
@@ -271,7 +271,7 @@
                 </div>
             </div>
 
-             Haber: TEKNOFEST (ETKİNLİK) 
+
             <div x-show="cat === 'tumu' || cat === 'etkinlik'" x-transition.opacity.duration.300ms
                 class="animate-news-card bg-white/70 backdrop-blur-md border border-[#0B2545]/10 rounded-3xl overflow-hidden shadow-lg hover:shadow-xl hover:border-[#2F6FED]/30 hover:-translate-y-1 transition-all duration-500 group flex flex-col justify-between"
                 style="animation-delay: 0.4s;">
@@ -295,7 +295,7 @@
                 </div>
             </div>
 
-             Haber: Ekip Büyümesi (Kategorisiz - sadece Tümü) 
+
             <div x-show="cat === 'tumu'" x-transition.opacity.duration.300ms
                 class="animate-news-card bg-white/70 backdrop-blur-md border border-[#0B2545]/10 rounded-3xl overflow-hidden shadow-lg hover:shadow-xl hover:border-[#2F6FED]/30 hover:-translate-y-1 transition-all duration-500 group flex flex-col justify-between"
                 style="animation-delay: 0.5s;">
@@ -319,7 +319,7 @@
                 </div>
             </div>
 
-             Haber: Hibrit Bulut Ortaklığı (ALTYAPI) 
+
             <div x-show="cat === 'tumu' || cat === 'altyapi'" x-transition.opacity.duration.300ms
                 class="animate-news-card bg-white/70 backdrop-blur-md border border-[#0B2545]/10 rounded-3xl overflow-hidden shadow-lg hover:shadow-xl hover:border-[#2F6FED]/30 hover:-translate-y-1 transition-all duration-500 group flex flex-col justify-between"
                 style="animation-delay: 0.6s;">
@@ -343,7 +343,7 @@
                 </div>
             </div>
 
-             Haber: AL.Vision (YAPAY ZEKA) 
+
             <div x-show="cat === 'tumu' || cat === 'yapay-zeka'" x-transition.opacity.duration.300ms
                 class="animate-news-card bg-white/70 backdrop-blur-md border border-[#0B2545]/10 rounded-3xl overflow-hidden shadow-lg hover:shadow-xl hover:border-[#2F6FED]/30 hover:-translate-y-1 transition-all duration-500 group flex flex-col justify-between"
                 style="animation-delay: 0.7s;">
@@ -367,7 +367,7 @@
                 </div>
             </div>
 
-             Haber: Patent (AR-GE) 
+
             <div x-show="cat === 'tumu' || cat === 'ar-ge'" x-transition.opacity.duration.300ms
                 class="animate-news-card bg-white/70 backdrop-blur-md border border-[#0B2545]/10 rounded-3xl overflow-hidden shadow-lg hover:shadow-xl hover:border-[#2F6FED]/30 hover:-translate-y-1 transition-all duration-500 group flex flex-col justify-between"
                 style="animation-delay: 0.8s;">
@@ -391,7 +391,7 @@
                 </div>
             </div>
 
-             Haber: Fintech Summit (ETKİNLİK) 
+
             <div x-show="cat === 'tumu' || cat === 'etkinlik'" x-transition.opacity.duration.300ms
                 class="animate-news-card bg-white/70 backdrop-blur-md border border-[#0B2545]/10 rounded-3xl overflow-hidden shadow-lg hover:shadow-xl hover:border-[#2F6FED]/30 hover:-translate-y-1 transition-all duration-500 group flex flex-col justify-between"
                 style="animation-delay: 0.9s;">
@@ -416,13 +416,13 @@
             </div>
         </div>
 
-         Sonuç boşsa 
+
         <div x-show="!(cat === 'tumu' || cat === 'altyapi' || cat === 'yapay-zeka' || cat === 'ar-ge' || cat === 'etkinlik')"
             class="text-center py-16">
             <p class="al-font-body text-[#0B2545]/40">Bu kategoride henüz haber bulunmuyor.</p>
         </div>
 
-         Daha fazla yükle 
+
         <div class="flex justify-center mt-12">
             <button
                 class="al-font-mono text-xs tracking-widest text-[#0B2545]/60 hover:text-[#0B2545] border border-[#0B2545]/15 hover:border-[#0B2545]/30 bg-white/60 hover:bg-white rounded-full px-8 py-3.5 transition-all duration-300">
@@ -430,7 +430,7 @@
             </button>
         </div>
 
-         Bülten CTA 
+
         <div class="mt-24 bg-[#0B2545] rounded-3xl px-8 md:px-14 py-12 relative">
             <div class="absolute inset-0 rounded-3xl overflow-hidden pointer-events-none">
                 <div class="absolute inset-0 bg-gradient-to-tr from-[#2F6FED]/15 via-transparent to-[#FF9F45]/10"></div>

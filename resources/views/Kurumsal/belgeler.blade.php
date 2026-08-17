@@ -47,7 +47,7 @@
 
 <div class="min-h-screen bg-gradient-to-b from-[#EAF4FF] via-[#DCEEFF] to-[#EAF4FF] al-font-body text-[#0B2545]">
 
-     Navbar 
+
     <nav
         class="al-navbar sticky top-4 z-50 max-w-6xl mx-auto flex items-center justify-between px-6 md:px-8 py-4 rounded-full mt-4 border border-white/60">
         <a href="{{ route('home') }}"
@@ -107,7 +107,7 @@
             class="bg-white/70 backdrop-blur-md border border-[#0B2545]/10 rounded-3xl p-4 md:p-8 shadow-xl shadow-[#0B2545]/5">
             <div class="divide-y divide-[#0B2545]/10">
 
-                 Belge 1 
+
                 <div class="animate-row py-5 flex items-center justify-between gap-6 group">
                     <div class="flex items-center gap-5">
                         <div
@@ -126,7 +126,7 @@
                     </a>
                 </div>
 
-                 Belge 2 
+
                 <div class="animate-row py-5 flex items-center justify-between gap-6 group"
                     style="animation-delay: 0.1s;">
                     <div class="flex items-center gap-5">
@@ -146,7 +146,7 @@
                     </a>
                 </div>
 
-                 Belge 3 
+
                 <div class="animate-row py-5 flex items-center justify-between gap-6 group"
                     style="animation-delay: 0.2s;">
                     <div class="flex items-center gap-5">

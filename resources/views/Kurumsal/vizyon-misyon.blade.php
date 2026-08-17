@@ -88,7 +88,7 @@
 
 <div class="min-h-screen bg-gradient-to-b from-[#EAF4FF] via-[#DCEEFF] to-[#EAF4FF] al-font-body text-[#0B2545]">
 
-     Navbar 
+
     <nav
         class="al-navbar sticky top-4 z-50 max-w-6xl mx-auto flex items-center justify-between px-6 md:px-8 py-4 rounded-full mt-4 border border-white/60">
         <a href="{{ route('home') }}"
@@ -136,7 +136,7 @@
         </button>
     </nav>
 
-     Hero 
+
     <div class="relative overflow-hidden py-20 px-6">
         <div class="absolute inset-0 al-grid-bg pointer-events-none"></div>
 
@@ -160,7 +160,7 @@
             </p>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
-                 Vizyon Card 
+
                 <div
                     class="animate-card bg-white/70 backdrop-blur-md border border-[#0B2545]/10 rounded-3xl p-8 md:p-12 shadow-xl shadow-[#0B2545]/5 flex flex-col justify-between group hover:scale-[1.02] hover:border-[#2F6FED]/30 hover:shadow-2xl hover:shadow-[#2F6FED]/5 transition-all duration-500">
                     <div>
@@ -179,7 +179,7 @@
                     </div>
                 </div>
 
-                 Misyon Card 
+
                 <div
                     class="animate-card delay-card-2 bg-[#0B2545] text-white rounded-3xl p-8 md:p-12 shadow-xl flex flex-col justify-between group hover:scale-[1.02] hover:shadow-2xl hover:shadow-[#0B2545]/20 transition-all duration-500 relative overflow-hidden">
                     <div
@@ -205,7 +205,7 @@
         </div>
     </div>
 
-     Stats strip 
+
     <div class="px-6 pb-20">
         <div class="max-w-5xl mx-auto">
             <div
@@ -231,7 +231,7 @@
         </div>
     </div>
 
-     Değerlerimiz 
+
     <div class="px-6 pb-20">
         <div class="max-w-5xl mx-auto">
             <div class="flex items-end justify-between mb-10 flex-wrap gap-4">
@@ -305,7 +305,7 @@
         </div>
     </div>
 
-     Stratejik Yol Haritası 
+
     <div class="px-6 pb-24">
         <div class="max-w-5xl mx-auto">
             <div class="mb-10">
@@ -373,7 +373,7 @@
         </div>
     </div>
 
-     CTA 
+
     <div class="px-6 pb-24">
         <div class="max-w-5xl mx-auto">
             <div class="bg-[#0B2545] rounded-3xl px-8 md:px-14 py-14 text-center relative">

@@ -226,7 +226,7 @@
     <section class="max-w-7xl mx-auto px-6 pb-32">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
 
-            Yazılım Çözümleri
+
             <div
                 class="group relative h-96 border border-[#0B2545]/10 overflow-hidden hover:border-[#FF9F45]/50 transition-all duration-500 cursor-pointer rounded-2xl shadow-sm hover:shadow-xl hover:shadow-[#2F6FED]/10">
                 <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=800&q=80"
@@ -497,7 +497,7 @@
 
             <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
 
-                Marka
+
                 <div class="md:col-span-2">
                     <div class="al-font-display text-2xl font-bold tracking-tight mb-4">
                         AL<span class="text-[#FF9F45]">.</span>TECHNOLOGY
