@@ -132,7 +132,7 @@
 
     <main class="max-w-6xl mx-auto px-6 pb-24 space-y-24">
 
-         Kısa Tanıtım + İstatistik Şeridi 
+
         <section class="k-fade">
             <div class="max-w-3xl mx-auto text-center mb-12">
                 <p class="text-[#0B2545]/60 text-lg leading-relaxed">
@@ -164,7 +164,7 @@
             </div>
         </section>
 
-         Kurumsal Alt Sayfa Kartları 
+
         <section>
             <div class="text-center mb-12">
                 <p class="al-font-mono text-xs tracking-[0.3em] text-[#FF9F45] mb-4">KEŞFEDİN</p>
@@ -244,7 +244,7 @@
             </div>
         </section>
 
-         Değerlerimiz 
+
         <section>
             <div class="bg-[#0B2545] rounded-3xl p-10 md:p-16 relative overflow-hidden">
                 <div class="absolute inset-0 pointer-events-none"
@@ -290,7 +290,7 @@
             </div>
         </section>
 
-         CTA 
+
         <section class="text-center">
             <h2 class="al-font-display text-3xl md:text-4xl font-extrabold text-[#0B2545] mb-4">
                 Projenizi konuşmaya hazır mısınız?
