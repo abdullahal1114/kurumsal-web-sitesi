@@ -194,7 +194,7 @@ $sepetAdet = collect(session('sepet', []))->sum('adet');
 
 
     <nav
-        class="al-navbar sticky top-4 z-50 max-w-6xl mx-auto flex items-center justify-between px-6 md:px-8 py-4 rounded-full mt-4 border border-white/60">
+        class="al-navbar sticky top-4 z-50 max-w-6xl mx-auto flex items-center justify-between px-6 md:px-8 py-4 rounded-full border border-white/60">
         <a href="{{ route('home') }}"
             class="al-font-display text-2xl font-bold tracking-tight text-[#0B2545] cursor-pointer hover:opacity-70 transition-opacity duration-300">
             AL<span class="text-[#FF9F45]">.</span>TECHNOLOGY
@@ -234,7 +234,7 @@ $sepetAdet = collect(session('sepet', []))->sum('adet');
         </div>
 
         <div class="flex items-center gap-3">
-            Sepet Butonu: gerçek cart-drawer Livewire bileşenini açar
+            
             <button type="button" @click="Livewire.dispatch('cart-open')"
                 class="relative w-11 h-11 rounded-full bg-white/70 border border-[#0B2545]/10 flex items-center justify-center hover:bg-white transition-colors duration-300">
                 <svg :class="bump ? 'm-cart-bump' : ''" class="w-5 h-5 text-[#0B2545]" fill="none" stroke="currentColor"
