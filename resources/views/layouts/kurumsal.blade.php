@@ -67,6 +67,7 @@
 
     @stack('modals')
     <livewire:quote-request-modal />
+    <livewire:contact-modal />
     @livewireScripts
 
 </body>

@@ -70,76 +70,10 @@
 <div
     class="min-h-screen bg-gradient-to-b from-[#EAF4FF] via-[#DCEEFF] to-[#EAF4FF] al-font-body text-[#0B2545] selection:bg-[#FFB347] selection:text-[#0A1830]">
     
+    <x-site-navbar active="home" />
 
-    <nav
-        class="al-navbar sticky top-4 z-50 max-w-6xl mx-auto flex items-center justify-between px-6 md:px-8 py-4 rounded-full border border-white/60">
-        <div
-            class="al-font-display text-2xl font-bold tracking-tight text-[#0B2545] cursor-pointer hover:opacity-70 transition-opacity duration-300">
-            AL<span class="text-[#FF9F45]">.</span>TECHNOLOGY
-        </div>
-
-        <div class="hidden md:flex items-center gap-9 al-font-mono text-xs tracking-[0.15em] text-[#0B2545]/60">
-
-
-            <div class="relative group">
-                <a href="{{ route('kurumsal') }}"
-                    class="flex items-center gap-1 hover:text-[#0B2545] hover:opacity-100 opacity-70 transition-all duration-300 py-3 cursor-pointer">
-                    KURUMSAL
-                    <svg class="w-3 h-3 transition-transform duration-300 group-hover:rotate-180" fill="none"
-                        stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7" />
-                    </svg>
-                </a>
-
-
-                <div class="absolute top-full left-1/2 -translate-x-1/2 pt-2 w-56
-                            opacity-0 invisible translate-y-2
-                            group-hover:opacity-100 group-hover:visible group-hover:translate-y-0
-                            transition-all duration-300 ease-out z-50">
-
-                    <div
-                        class="bg-white/95 backdrop-blur-md border border-[#0B2545]/10 rounded-2xl shadow-xl shadow-[#0B2545]/10 p-3 flex flex-col gap-2">
-
-                        <a href="{{ route('kurumsal.hakkimizda') }}"
-                            class="al-font-body normal-case tracking-normal text-sm font-semibold text-white text-center bg-[#0B2545] hover:bg-[#2F6FED] transition-colors duration-300 rounded-xl py-3 px-4">
-                            Hakkımızda
-                        </a>
-
-                        <a href="{{ route('kurumsal.vizyon-misyon') }}"
-                            class="al-font-body normal-case tracking-normal text-sm font-semibold text-white text-center bg-[#0B2545] hover:bg-[#2F6FED] transition-colors duration-300 rounded-xl py-3 px-4">
-                            Vizyon - Misyon
-                        </a>
-
-                        <a href="{{ route('kurumsal.haberler') }}"
-                            class="al-font-body normal-case tracking-normal text-sm font-semibold text-white text-center bg-[#0B2545] hover:bg-[#2F6FED] transition-colors duration-300 rounded-xl py-3 px-4">
-                            Haberler
-                        </a>
-
-                        <a href="{{ route('kurumsal.belgeler') }}"
-                            class="al-font-body normal-case tracking-normal text-sm font-semibold text-white text-center bg-[#0B2545] hover:bg-[#2F6FED] transition-colors duration-300 rounded-xl py-3 px-4">
-                            Belgeler
-                        </a>
-
-                    </div>
-                </div>
-            </div>
-
-            <a href="{{ route('referanslar') }}"
-                class="hover:text-[#0B2545] hover:opacity-100 opacity-70 transition-all duration-300">
-                REFERANSLAR
-            </a>
-            <a href="#"
-                class="hover:text-[#0B2545] hover:opacity-100 opacity-70 transition-all duration-300">ÜRÜNLER</a>
-            <a href="#" class="hover:text-[#0B2545] hover:opacity-100 opacity-70 transition-all duration-300">MAĞAZA</a>
-        </div>
-
-        <livewire:quote-request-modal />
-    </nav>
-
-
-    <header class="relative py-28 md:py-36 px-6 overflow-hidden">
+    <header class="relative py-16 sm:py-24 md:py-36 px-4 sm:px-6 overflow-hidden">
         <div class="absolute inset-0 al-grid-bg pointer-events-none"></div>
-
 
         <div
             class="absolute top-1/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#FF9F45]/50 to-transparent al-pulse">
@@ -149,34 +83,43 @@
         </div>
 
         <div class="relative max-w-5xl mx-auto text-center">
-            <p class="al-font-mono text-xs tracking-[0.3em] text-[#FF9F45] mb-6">DİJİTAL DÖNÜŞÜM PARTNERİ</p>
+            <p class="al-font-mono text-xs tracking-[0.3em] text-[#FF9F45] mb-4 sm:mb-6">DİJİTAL DÖNÜŞÜM PARTNERİ</p>
 
             <h1
-                class="al-font-display text-6xl md:text-8xl font-extrabold mb-6 leading-[0.95] tracking-tight text-[#0B2545]">
+                class="al-font-display text-4xl sm:text-6xl md:text-8xl font-extrabold mb-4 sm:mb-6 leading-[0.95] tracking-tight text-[#0B2545]">
                 AL TECHNOLOGY
             </h1>
-            <h2 class="al-font-display text-2xl md:text-4xl font-bold mb-8 text-[#2F6FED] tracking-wide">
+            <h2 class="al-font-display text-xl sm:text-2xl md:text-4xl font-bold mb-6 sm:mb-8 text-[#2F6FED] tracking-wide">
                 GELECEĞİ <span class="text-[#FF9F45]">KODLUYORUZ.</span>
             </h2>
-            <p class="max-w-xl mx-auto text-[#0B2545]/60 text-lg leading-relaxed">
+            <p class="max-w-xl mx-auto text-[#0B2545]/60 text-base sm:text-lg leading-relaxed">
                 Dijital dönüşümde profesyonel çözümler. İşletmeniz için en yeni teknolojileri,
                 modern altyapı ve uzman destekle sunuyoruz.
             </p>
         </div>
     </header>
 
-
-    <section class="relative max-w-6xl mx-auto px-6 -mt-6 mb-20">
+    <section class="relative max-w-6xl mx-auto px-4 sm:px-6 -mt-6 mb-16 sm:mb-20">
         <div
-            class="grid grid-cols-2 md:grid-cols-4 gap-4 bg-white/70 backdrop-blur-sm border border-[#0B2545]/10 rounded-2xl p-8 shadow-sm">
+            class="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 bg-white/70 backdrop-blur-sm border border-[#0B2545]/10 rounded-2xl p-5 sm:p-8 shadow-sm">
             <div class="text-center">
-                <p class="counter al-font-display text-4xl font-extrabold text-[#0B2545]" data-target="12">0</p>
+                <p class="counter al-font-display text-3xl sm:text-4xl font-extrabold text-[#0B2545]" data-target="12">0</p>
                 <p class="al-font-mono text-[10px] tracking-widest text-[#0B2545]/50 mt-1">YIL DENEYİM</p>
             </div>
             <div class="text-center">
-                <p class="counter al-font-display text-4xl font-extrabold text-[#0B2545]" data-target="240">0</p>
+                <p class="counter al-font-display text-3xl sm:text-4xl font-extrabold text-[#0B2545]" data-target="240">0</p>
                 <p class="al-font-mono text-[10px] tracking-widest text-[#0B2545]/50 mt-1">TAMAMLANAN PROJE</p>
             </div>
+            <div class="text-center">
+                <p class="counter al-font-display text-3xl sm:text-4xl font-extrabold text-[#0B2545]" data-target="98">0</p>
+                <p class="al-font-mono text-[10px] tracking-widest text-[#0B2545]/50 mt-1">MÜŞTERİ MEMNUNİYETİ</p>
+            </div>
+            <div class="text-center">
+                <p class="al-font-display text-3xl sm:text-4xl font-extrabold text-[#0B2545]">24/7</p>
+                <p class="al-font-mono text-[10px] tracking-widest text-[#0B2545]/50 mt-1">TEKNİK DESTEK</p>
+            </div>
+        </div>
+    </section>
             <div class="text-center">
                 <p class="counter al-font-display text-4xl font-extrabold text-[#0B2545]" data-target="98">0</p>
                 <p class="al-font-mono text-[10px] tracking-widest text-[#0B2545]/50 mt-1">MÜŞTERİ MEMNUNİYETİ</p>
@@ -223,20 +166,20 @@
     </script>
 
 
-    <section class="max-w-7xl mx-auto px-6 pb-32">
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 pb-20 sm:pb-32">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
 
 
             <div
-                class="group relative h-96 border border-[#0B2545]/10 overflow-hidden hover:border-[#FF9F45]/50 transition-all duration-500 cursor-pointer rounded-2xl shadow-sm hover:shadow-xl hover:shadow-[#2F6FED]/10">
+                class="group relative h-80 sm:h-96 border border-[#0B2545]/10 overflow-hidden hover:border-[#FF9F45]/50 transition-all duration-500 cursor-pointer rounded-2xl shadow-sm hover:shadow-xl hover:shadow-[#2F6FED]/10">
                 <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=800&q=80"
                     alt="Yazılım Çözümleri"
                     class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
                 <div class="absolute inset-0 bg-gradient-to-t from-[#0B2545]/90 via-[#0B2545]/50 to-[#0B2545]/10"></div>
 
-                <div class="relative h-full p-10 flex flex-col justify-end">
+                <div class="relative h-full p-6 sm:p-10 flex flex-col justify-end">
                     <span class="al-font-mono text-xs text-[#FF9F45] mb-auto">SW</span>
-                    <h3 class="al-font-display text-3xl font-bold mb-3 text-white">Yazılım Çözümleri</h3>
+                    <h3 class="al-font-display text-2xl sm:text-3xl font-bold mb-2 sm:mb-3 text-white">Yazılım Çözümleri</h3>
                     <p class="text-white/70 text-sm mb-4 leading-relaxed">
                         Kurumunuza özel, ölçeklenebilir yazılım mimarileri.
                     </p>
@@ -246,15 +189,15 @@
 
 
             <div
-                class="group relative h-96 border border-[#0B2545]/10 overflow-hidden hover:border-[#FF9F45]/50 transition-all duration-500 cursor-pointer rounded-2xl shadow-sm hover:shadow-xl hover:shadow-[#2F6FED]/10">
+                class="group relative h-80 sm:h-96 border border-[#0B2545]/10 overflow-hidden hover:border-[#FF9F45]/50 transition-all duration-500 cursor-pointer rounded-2xl shadow-sm hover:shadow-xl hover:shadow-[#2F6FED]/10">
                 <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&q=80"
                     alt="Cloud Sistemler"
                     class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
                 <div class="absolute inset-0 bg-gradient-to-t from-[#0B2545]/90 via-[#0B2545]/50 to-[#0B2545]/10"></div>
 
-                <div class="relative h-full p-10 flex flex-col justify-end">
+                <div class="relative h-full p-6 sm:p-10 flex flex-col justify-end">
                     <span class="al-font-mono text-xs text-[#FF9F45] mb-auto">CL</span>
-                    <h3 class="al-font-display text-3xl font-bold mb-3 text-white">Cloud Sistemler</h3>
+                    <h3 class="al-font-display text-2xl sm:text-3xl font-bold mb-2 sm:mb-3 text-white">Cloud Sistemler</h3>
                     <p class="text-white/70 text-sm mb-4 leading-relaxed">
                         Güvenli, esnek ve kesintisiz bulut altyapı yönetimi.
                     </p>
@@ -264,15 +207,15 @@
 
 
             <div
-                class="group relative h-96 border border-[#0B2545]/10 overflow-hidden hover:border-[#FF9F45]/50 transition-all duration-500 cursor-pointer rounded-2xl shadow-sm hover:shadow-xl hover:shadow-[#2F6FED]/10">
+                class="group relative h-80 sm:h-96 border border-[#0B2545]/10 overflow-hidden hover:border-[#FF9F45]/50 transition-all duration-500 cursor-pointer rounded-2xl shadow-sm hover:shadow-xl hover:shadow-[#2F6FED]/10">
                 <img src="https://images.unsplash.com/photo-1580894732444-8ecded7900cd?auto=format&fit=crop&w=800&q=80"
                     alt="Teknik Destek"
                     class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
                 <div class="absolute inset-0 bg-gradient-to-t from-[#0B2545]/90 via-[#0B2545]/50 to-[#0B2545]/10"></div>
 
-                <div class="relative h-full p-10 flex flex-col justify-end">
+                <div class="relative h-full p-6 sm:p-10 flex flex-col justify-end">
                     <span class="al-font-mono text-xs text-[#FF9F45] mb-auto">TD</span>
-                    <h3 class="al-font-display text-3xl font-bold mb-3 text-white">Teknik Destek</h3>
+                    <h3 class="al-font-display text-2xl sm:text-3xl font-bold mb-2 sm:mb-3 text-white">Teknik Destek</h3>
                     <p class="text-white/70 text-sm mb-4 leading-relaxed">
                         7/24 uzman ekip ile kesintisiz operasyon güvencesi.
                     </p>
@@ -284,31 +227,31 @@
     </section>
 
 
-    <section class="max-w-7xl mx-auto px-6 pb-32 space-y-24">
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 pb-20 sm:pb-32 space-y-16 sm:space-y-24">
 
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
             <div class="rounded-2xl overflow-hidden shadow-sm order-2 md:order-1">
                 <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=900&q=80"
-                    alt="Ekip çalışması" class="w-full h-80 object-cover">
+                    alt="Ekip çalışması" class="w-full h-60 sm:h-80 object-cover">
             </div>
             <div class="order-1 md:order-2">
-                <p class="al-font-mono text-xs tracking-[0.3em] text-[#FF9F45] mb-4">SÜREÇ</p>
-                <h3 class="al-font-display text-3xl font-bold text-[#0B2545] mb-4">
+                <p class="al-font-mono text-xs tracking-[0.3em] text-[#FF9F45] mb-3 sm:mb-4">SÜREÇ</p>
+                <h3 class="al-font-display text-2xl sm:text-3xl font-bold text-[#0B2545] mb-3 sm:mb-4">
                     Analizden teslime uçtan uca ortaklık
                 </h3>
-                <p class="text-[#0B2545]/60 leading-relaxed mb-6">
+                <p class="text-[#0B2545]/60 leading-relaxed mb-6 text-sm sm:text-base">
                     İhtiyaç analiziyle başlayıp, mimari tasarım, geliştirme ve devreye alma
                     süreçlerinin her adımında yanınızdayız. Her proje, ölçülebilir hedeflerle
                     şekillenir ve düzenli raporlamayla ilerler.
                 </p>
-                <div class="flex gap-8">
+                <div class="flex gap-6 sm:gap-8">
                     <div>
-                        <p class="al-font-display text-2xl font-bold text-[#2F6FED]">%40</p>
+                        <p class="al-font-display text-xl sm:text-2xl font-bold text-[#2F6FED]">%40</p>
                         <p class="text-[#0B2545]/50 text-xs">daha hızlı teslim</p>
                     </div>
                     <div>
-                        <p class="al-font-display text-2xl font-bold text-[#2F6FED]">%25</p>
+                        <p class="al-font-display text-xl sm:text-2xl font-bold text-[#2F6FED]">%25</p>
                         <p class="text-[#0B2545]/50 text-xs">maliyet tasarrufu</p>
                     </div>
                 </div>
@@ -316,18 +259,18 @@
         </div>
 
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
             <div>
-                <p class="al-font-mono text-xs tracking-[0.3em] text-[#FF9F45] mb-4">ALTYAPI</p>
-                <h3 class="al-font-display text-3xl font-bold text-[#0B2545] mb-4">
+                <p class="al-font-mono text-xs tracking-[0.3em] text-[#FF9F45] mb-3 sm:mb-4">ALTYAPI</p>
+                <h3 class="al-font-display text-2xl sm:text-3xl font-bold text-[#0B2545] mb-3 sm:mb-4">
                     Güvenli ve ölçeklenebilir bulut mimarisi
                 </h3>
-                <p class="text-[#0B2545]/60 leading-relaxed mb-6">
+                <p class="text-[#0B2545]/60 leading-relaxed mb-6 text-sm sm:text-base">
                     Trafiğinize göre otomatik ölçeklenen, çoklu bölge yedeklemeli altyapılar
                     kuruyoruz. Böylece büyüme dönemlerinde performans kaybı yaşamaz,
                     kesinti riskini minimuma indirirsiniz.
                 </p>
-                <ul class="space-y-2 text-sm text-[#0B2545]/70">
+                <ul class="space-y-2.5 text-sm text-[#0B2545]/70">
                     <li class="flex items-center gap-2">
                         <span class="w-1.5 h-1.5 rounded-full bg-[#FF9F45]"></span>
                         Otomatik yedekleme ve felaket kurtarma
@@ -340,32 +283,32 @@
             </div>
             <div class="rounded-2xl overflow-hidden shadow-sm">
                 <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=900&q=80"
-                    alt="Sunucu ve bulut altyapısı" class="w-full h-80 object-cover">
+                    alt="Sunucu ve bulut altyapısı" class="w-full h-60 sm:h-80 object-cover">
             </div>
         </div>
 
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
             <div class="rounded-2xl overflow-hidden shadow-sm order-2 md:order-1">
                 <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=900&q=80"
-                    alt="Veri analizi ve dashboard" class="w-full h-80 object-cover">
+                    alt="Veri analizi ve dashboard" class="w-full h-60 sm:h-80 object-cover">
             </div>
             <div class="order-1 md:order-2">
-                <p class="al-font-mono text-xs tracking-[0.3em] text-[#FF9F45] mb-4">İZLEME</p>
-                <h3 class="al-font-display text-3xl font-bold text-[#0B2545] mb-4">
+                <p class="al-font-mono text-xs tracking-[0.3em] text-[#FF9F45] mb-3 sm:mb-4">İZLEME</p>
+                <h3 class="al-font-display text-2xl sm:text-3xl font-bold text-[#0B2545] mb-3 sm:mb-4">
                     Gerçek zamanlı görünürlük ve raporlama
                 </h3>
-                <p class="text-[#0B2545]/60 leading-relaxed mb-6">
+                <p class="text-[#0B2545]/60 leading-relaxed mb-6 text-sm sm:text-base">
                     Sistem performansını, kullanıcı davranışlarını ve iş metriklerini tek bir
                     panelden izlemenizi sağlıyoruz. Kararlarınızı veriyle destekleyin.
                 </p>
-                <div class="flex gap-8">
+                <div class="flex gap-6 sm:gap-8">
                     <div>
-                        <p class="al-font-display text-2xl font-bold text-[#2F6FED]">7/24</p>
+                        <p class="al-font-display text-xl sm:text-2xl font-bold text-[#2F6FED]">7/24</p>
                         <p class="text-[#0B2545]/50 text-xs">canlı izleme</p>
                     </div>
                     <div>
-                        <p class="al-font-display text-2xl font-bold text-[#2F6FED]">Fark</p>
+                        <p class="al-font-display text-xl sm:text-2xl font-bold text-[#2F6FED]">Fark</p>
                         <p class="text-[#0B2545]/50 text-xs">Anlık müdahale hızı</p>
                     </div>
                 </div>
@@ -375,25 +318,25 @@
     </section>
 
 
-    <section class="max-w-7xl mx-auto px-6 pb-32">
-        <div class="text-center mb-16">
-            <p class="al-font-mono text-xs tracking-[0.3em] text-[#FF9F45] mb-4">KÜRESEL BAKIŞ</p>
-            <h2 class="al-font-display text-4xl md:text-5xl font-extrabold text-[#0B2545] mb-4">
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 pb-20 sm:pb-32">
+        <div class="text-center mb-12 sm:mb-16">
+            <p class="al-font-mono text-xs tracking-[0.3em] text-[#FF9F45] mb-3 sm:mb-4">KÜRESEL BAKIŞ</p>
+            <h2 class="al-font-display text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#0B2545] mb-4">
                 Dünyada Teknoloji
             </h2>
-            <p class="max-w-2xl mx-auto text-[#0B2545]/60 text-lg leading-relaxed">
+            <p class="max-w-2xl mx-auto text-[#0B2545]/60 text-base sm:text-lg leading-relaxed">
                 Global teknoloji trendlerini yakından takip ediyor, işletmenizi geleceğe hazırlayacak
                 çözümleri erken adapte ediyoruz.
             </p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
 
             <div
-                class="flex gap-5 bg-white/60 backdrop-blur-sm border border-[#0B2545]/10 rounded-2xl p-7 hover:border-[#2F6FED]/30 hover:bg-white transition-all duration-500">
+                class="flex gap-4 sm:gap-5 bg-white/60 backdrop-blur-sm border border-[#0B2545]/10 rounded-2xl p-5 sm:p-7 hover:border-[#2F6FED]/30 hover:bg-white transition-all duration-500">
                 <div class="al-font-mono text-xs text-[#2F6FED] font-bold shrink-0 pt-1">AI</div>
                 <div>
-                    <h3 class="al-font-display text-xl font-bold text-[#0B2545] mb-2">Yapay Zeka ve Otomasyon</h3>
+                    <h3 class="al-font-display text-lg sm:text-xl font-bold text-[#0B2545] mb-2">Yapay Zeka ve Otomasyon</h3>
                     <p class="text-[#0B2545]/60 text-sm leading-relaxed">
                         Kurumlar, operasyonel verimliliği artırmak için üretken yapay zekayı iş
                         süreçlerine entegre ediyor. Biz de müşterilerimize bu dönüşümde rehberlik ediyoruz.
@@ -402,10 +345,10 @@
             </div>
 
             <div
-                class="flex gap-5 bg-white/60 backdrop-blur-sm border border-[#0B2545]/10 rounded-2xl p-7 hover:border-[#2F6FED]/30 hover:bg-white transition-all duration-500">
+                class="flex gap-4 sm:gap-5 bg-white/60 backdrop-blur-sm border border-[#0B2545]/10 rounded-2xl p-5 sm:p-7 hover:border-[#2F6FED]/30 hover:bg-white transition-all duration-500">
                 <div class="al-font-mono text-xs text-[#2F6FED] font-bold shrink-0 pt-1">SEC</div>
                 <div>
-                    <h3 class="al-font-display text-xl font-bold text-[#0B2545] mb-2">Siber Güvenlik</h3>
+                    <h3 class="al-font-display text-lg sm:text-xl font-bold text-[#0B2545] mb-2">Siber Güvenlik</h3>
                     <p class="text-[#0B2545]/60 text-sm leading-relaxed">
                         Artan siber tehditlere karşı sıfır güven (zero-trust) mimarileri ve sürekli
                         izleme, işletmelerin öncelikli gündemi haline geldi.
@@ -414,10 +357,10 @@
             </div>
 
             <div
-                class="flex gap-5 bg-white/60 backdrop-blur-sm border border-[#0B2545]/10 rounded-2xl p-7 hover:border-[#2F6FED]/30 hover:bg-white transition-all duration-500">
+                class="flex gap-4 sm:gap-5 bg-white/60 backdrop-blur-sm border border-[#0B2545]/10 rounded-2xl p-5 sm:p-7 hover:border-[#2F6FED]/30 hover:bg-white transition-all duration-500">
                 <div class="al-font-mono text-xs text-[#2F6FED] font-bold shrink-0 pt-1">EDGE</div>
                 <div>
-                    <h3 class="al-font-display text-xl font-bold text-[#0B2545] mb-2">Edge Computing</h3>
+                    <h3 class="al-font-display text-lg sm:text-xl font-bold text-[#0B2545] mb-2">Edge Computing</h3>
                     <p class="text-[#0B2545]/60 text-sm leading-relaxed">
                         Veri işlemenin kaynağa yakınlaştırılması, gecikme sürelerini azaltarak
                         gerçek zamanlı karar alma süreçlerini hızlandırıyor.
@@ -426,10 +369,10 @@
             </div>
 
             <div
-                class="flex gap-5 bg-white/60 backdrop-blur-sm border border-[#0B2545]/10 rounded-2xl p-7 hover:border-[#2F6FED]/30 hover:bg-white transition-all duration-500">
+                class="flex gap-4 sm:gap-5 bg-white/60 backdrop-blur-sm border border-[#0B2545]/10 rounded-2xl p-5 sm:p-7 hover:border-[#2F6FED]/30 hover:bg-white transition-all duration-500">
                 <div class="al-font-mono text-xs text-[#2F6FED] font-bold shrink-0 pt-1">SUS</div>
                 <div>
-                    <h3 class="al-font-display text-xl font-bold text-[#0B2545] mb-2">Sürdürülebilir Teknoloji</h3>
+                    <h3 class="al-font-display text-lg sm:text-xl font-bold text-[#0B2545] mb-2">Sürdürülebilir Teknoloji</h3>
                     <p class="text-[#0B2545]/60 text-sm leading-relaxed">
                         Enerji verimli veri merkezleri ve yeşil yazılım pratikleri, dijital
                         dönüşümün çevresel ayak izini azaltmada öne çıkıyor.
@@ -441,43 +384,43 @@
     </section>
 
 
-    <section class="max-w-6xl mx-auto px-6 pb-32">
-        <div class="bg-[#0B2545] rounded-3xl p-10 md:p-16 relative overflow-hidden">
+    <section class="max-w-6xl mx-auto px-4 sm:px-6 pb-20 sm:pb-32">
+        <div class="bg-[#0B2545] rounded-3xl p-6 sm:p-10 md:p-16 relative overflow-hidden">
             <div class="absolute inset-0 al-grid-bg-footer pointer-events-none"></div>
 
-            <div class="relative grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div class="relative grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
                 <div>
-                    <p class="al-font-mono text-xs tracking-[0.3em] text-[#FF9F45] mb-4">NEDEN AL TECHNOLOGY</p>
-                    <h2 class="al-font-display text-3xl md:text-4xl font-extrabold text-white mb-6 leading-tight">
+                    <p class="al-font-mono text-xs tracking-[0.3em] text-[#FF9F45] mb-3 sm:mb-4">NEDEN AL TECHNOLOGY</p>
+                    <h2 class="al-font-display text-2xl sm:text-3xl md:text-4xl font-extrabold text-white mb-4 sm:mb-6 leading-tight">
                         Teknolojiyi değil,<br>sonuçları konuşuruz.
                     </h2>
-                    <p class="text-blue-100/60 leading-relaxed">
+                    <p class="text-blue-100/60 leading-relaxed text-sm sm:text-base">
                         Her projede ölçülebilir iş değeri hedefliyoruz. Süreç boyunca şeffaf iletişim
                         ve uzun vadeli teknik ortaklık kuruyoruz.
                     </p>
                 </div>
 
-                <ul class="space-y-5">
+                <ul class="space-y-4 sm:space-y-5">
                     <li class="flex items-start gap-4">
                         <span class="al-font-mono text-xs text-[#FF9F45] mt-1">01</span>
                         <div>
-                            <p class="al-font-display font-bold text-white mb-1">Uzman Kadro</p>
-                            <p class="text-blue-100/50 text-sm">Alanında deneyimli mühendis ve mimarlardan oluşan ekip.
+                            <p class="al-font-display font-bold text-white mb-1 text-sm sm:text-base">Uzman Kadro</p>
+                            <p class="text-blue-100/50 text-xs sm:text-sm">Alanında deneyimli mühendis ve mimarlardan oluşan ekip.
                             </p>
                         </div>
                     </li>
                     <li class="flex items-start gap-4">
                         <span class="al-font-mono text-xs text-[#FF9F45] mt-1">02</span>
                         <div>
-                            <p class="al-font-display font-bold text-white mb-1">Şeffaf Süreç</p>
-                            <p class="text-blue-100/50 text-sm">Her aşamada raporlama ve düzenli geri bildirim.</p>
+                            <p class="al-font-display font-bold text-white mb-1 text-sm sm:text-base">Şeffaf Süreç</p>
+                            <p class="text-blue-100/50 text-xs sm:text-sm">Her aşamada raporlama ve düzenli geri bildirim.</p>
                         </div>
                     </li>
                     <li class="flex items-start gap-4">
                         <span class="al-font-mono text-xs text-[#FF9F45] mt-1">03</span>
                         <div>
-                            <p class="al-font-display font-bold text-white mb-1">Sürekli Destek</p>
-                            <p class="text-blue-100/50 text-sm">Proje tesliminden sonra da yanınızdayız.</p>
+                            <p class="al-font-display font-bold text-white mb-1 text-sm sm:text-base">Sürekli Destek</p>
+                            <p class="text-blue-100/50 text-xs sm:text-sm">Proje tesliminden sonra da yanınızdayız.</p>
                         </div>
                     </li>
                 </ul>
@@ -493,9 +436,9 @@
             class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#FF9F45]/50 to-transparent al-pulse">
         </div>
 
-        <div class="relative max-w-7xl mx-auto px-6 md:px-8 pt-20 pb-10">
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 md:px-8 pt-14 sm:pt-20 pb-10">
 
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 mb-12 sm:mb-16">
 
 
                 <div class="md:col-span-2">

@@ -40,85 +40,17 @@
     <div class="min-h-screen bg-gradient-to-b from-[#EAF4FF] via-[#DCEEFF] to-[#EAF4FF]">
 
 
-        <nav
-            class="al-navbar sticky top-4 z-50 max-w-6xl mx-auto flex items-center justify-between px-6 md:px-8 py-4 rounded-full border border-white/60">
-            <div
-                class="al-font-display text-2xl font-bold tracking-tight text-[#0B2545] cursor-pointer hover:opacity-70 transition-opacity duration-300">
-                AL<span class="text-[#FF9F45]">.</span>TECHNOLOGY
-            </div>
+        <x-site-navbar active="referanslar" />
 
-            <div class="hidden md:flex items-center gap-9 al-font-mono text-xs tracking-[0.15em] text-[#0B2545]/60">
+        <div class="max-w-7xl mx-auto py-10 px-4 sm:px-6 opacity-0 animate-fade-in-up">
 
-
-                <div class="relative group">
-                    <a href="{{ route('kurumsal') }}"
-                        class="flex items-center gap-1 hover:text-[#0B2545] hover:opacity-100 opacity-70 transition-all duration-300 py-3 cursor-pointer">
-                        KURUMSAL
-                        <svg class="w-3 h-3 transition-transform duration-300 group-hover:rotate-180" fill="none"
-                            stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
-                                d="M19 9l-7 7-7-7" />
-                        </svg>
-                    </a>
-
-
-                    <div class="absolute top-full left-1/2 -translate-x-1/2 pt-2 w-56
-                                opacity-0 invisible translate-y-2
-                                group-hover:opacity-100 group-hover:visible group-hover:translate-y-0
-                                transition-all duration-300 ease-out z-50">
-
-                        <div
-                            class="bg-white/95 backdrop-blur-md border border-[#0B2545]/10 rounded-2xl shadow-xl shadow-[#0B2545]/10 p-3 flex flex-col gap-2">
-
-                            <a href="{{ route('kurumsal.hakkimizda') }}"
-                                class="al-font-body normal-case tracking-normal text-sm font-semibold text-white text-center bg-[#0B2545] hover:bg-[#2F6FED] transition-colors duration-300 rounded-xl py-3 px-4">
-                                Hakkımızda
-                            </a>
-
-                            <a href="{{ route('kurumsal.vizyon-misyon') }}"
-                                class="al-font-body normal-case tracking-normal text-sm font-semibold text-white text-center bg-[#0B2545] hover:bg-[#2F6FED] transition-colors duration-300 rounded-xl py-3 px-4">
-                                Vizyon - Misyon
-                            </a>
-
-                            <a href="{{ route('kurumsal.haberler') }}"
-                                class="al-font-body normal-case tracking-normal text-sm font-semibold text-white text-center bg-[#0B2545] hover:bg-[#2F6FED] transition-colors duration-300 rounded-xl py-3 px-4">
-                                Haberler
-                            </a>
-
-                            <a href="{{ route('kurumsal.belgeler') }}"
-                                class="al-font-body normal-case tracking-normal text-sm font-semibold text-white text-center bg-[#0B2545] hover:bg-[#2F6FED] transition-colors duration-300 rounded-xl py-3 px-4">
-                                Belgeler
-                            </a>
-
-                        </div>
-                    </div>
-                </div>
-
-                <a href="{{ route('referanslar') }}"
-                    class="hover:text-[#0B2545] hover:opacity-100 opacity-70 transition-all duration-300">
-                    REFERANSLAR
-                </a>
-                <a href="{{ route('urunler') }}"
-                    class="hover:text-[#0B2545] hover:opacity-100 opacity-70 transition-all duration-300">ÜRÜNLER</a>
-                <a href="{{ route('magaza') }}"
-                    class="hover:text-[#0B2545] hover:opacity-100 opacity-70 transition-all duration-300">MAĞAZA</a>
-            </div>
-
-            <button type="button" onclick="Livewire.dispatch('openQuoteModal')"
-                class="al-font-display bg-[#FF9F45] hover:bg-[#ffb066] hover:opacity-90 hover:scale-[1.03] transition-all duration-300 text-[#0A1830] px-6 py-2.5 rounded-full font-bold text-sm tracking-wide">
-                FİYAT TEKLİFİ AL
-            </button>
-        </nav>
-
-        <div class="max-w-7xl mx-auto py-10 px-6 opacity-0 animate-fade-in-up">
-
-            <div class="text-center mb-16">
-                <h2 class="al-font-display text-4xl md:text-5xl font-extrabold text-[#0B2545] mb-4">Referanslarımız</h2>
-                <p class="text-[#0B2545]/60 max-w-2xl mx-auto text-lg">Sektörün öncü markalarıyla gerçekleştirdiğimiz
+            <div class="text-center mb-12 sm:mb-16">
+                <h2 class="al-font-display text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#0B2545] mb-3 sm:mb-4">Referanslarımız</h2>
+                <p class="text-[#0B2545]/60 max-w-2xl mx-auto text-base sm:text-lg">Sektörün öncü markalarıyla gerçekleştirdiğimiz
                     başarılı projeler ve dijital dönüşüm hikayeleri.</p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-10">
                 @php
                 // Ekstra veri alanları (kategori ve yil) eklendi
                 $referanslar = [
@@ -143,41 +75,41 @@
 
                 @foreach($referanslar as $index => $ref)
                 <div
-                    class="relative group h-[420px] rounded-[2rem] overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 border border-[#0B2545]/10 opacity-0 animate-fade-in-up {{ $index % 2 == 0 ? 'stagger-1' : 'stagger-2' }}">
+                    class="relative group h-[380px] sm:h-[420px] rounded-3xl sm:rounded-[2rem] overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 border border-[#0B2545]/10 opacity-0 animate-fade-in-up {{ $index % 2 == 0 ? 'stagger-1' : 'stagger-2' }}">
 
                     <img src="{{ asset('images/' . $ref['dosya']) }}"
                         onerror="this.style.display='none'; this.nextElementSibling.classList.add('bg-gradient-to-br', 'from-[#0B2545]', 'to-slate-900')"
                         class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700 ease-out">
 
                     <div
-                        class="absolute inset-0 bg-gradient-to-t from-[#0B2545] via-[#0B2545]/60 to-transparent opacity-80 group-hover:opacity-95 transition-opacity duration-500">
+                        class="absolute inset-0 bg-gradient-to-t from-[#0B2545] via-[#0B2545]/60 to-transparent opacity-85 group-hover:opacity-95 transition-opacity duration-500">
                     </div>
 
                     <div
-                        class="absolute inset-0 p-8 flex flex-col justify-end translate-y-8 group-hover:translate-y-0 transition-transform duration-500 ease-out">
+                        class="absolute inset-0 p-6 sm:p-8 flex flex-col justify-end translate-y-0 md:translate-y-8 md:group-hover:translate-y-0 transition-transform duration-500 ease-out">
 
                         <div
-                            class="flex items-center justify-between mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
+                            class="flex items-center justify-between mb-3 sm:mb-4 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-500 delay-100">
                             <span
-                                class="px-4 py-1.5 bg-[#FF9F1C] text-white text-xs font-bold tracking-wider rounded-full uppercase">
+                                class="px-3.5 sm:px-4 py-1.5 bg-[#FF9F1C] text-white text-[11px] sm:text-xs font-bold tracking-wider rounded-full uppercase">
                                 {{ $ref['kategori'] }}
                             </span>
-                            <span class="text-white/80 text-sm font-medium">
+                            <span class="text-white/80 text-xs sm:text-sm font-medium">
                                 {{ $ref['yil'] }}
                             </span>
                         </div>
 
-                        <h3 class="text-white text-3xl font-extrabold mb-3 drop-shadow-md">{{ $ref['isim'] }}</h3>
+                        <h3 class="text-white text-2xl sm:text-3xl font-extrabold mb-2 sm:mb-3 drop-shadow-md">{{ $ref['isim'] }}</h3>
 
                         <p
-                            class="text-white/80 text-base leading-relaxed mb-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-200">
+                            class="text-white/85 text-sm sm:text-base leading-relaxed mb-4 sm:mb-6 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-500 delay-200">
                             {{ $ref['metin'] }}
                         </p>
 
                         <div
-                            class="w-12 h-12 rounded-full border border-white/30 flex items-center justify-center backdrop-blur-sm group-hover:bg-white group-hover:text-[#0B2545] text-white transition-all duration-300 opacity-0 group-hover:opacity-100 delay-300">
+                            class="w-10 h-10 sm:w-12 sm:h-12 rounded-full border border-white/30 flex items-center justify-center backdrop-blur-sm group-hover:bg-white group-hover:text-[#0B2545] text-white transition-all duration-300 opacity-100 md:opacity-0 md:group-hover:opacity-100 delay-300">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
-                                stroke="currentColor" class="w-5 h-5 group-hover:translate-x-1 transition-transform">
+                                stroke="currentColor" class="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform">
                                 <path stroke-linecap="round" stroke-linejoin="round"
                                     d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
                             </svg>

@@ -1,54 +1,5 @@
 <x-kurumsal-layout>
-    <nav
-        class="al-navbar sticky top-4 z-50 max-w-6xl mx-auto flex items-center justify-between px-6 md:px-8 py-4 rounded-full border border-white/60 bg-white/80 backdrop-blur-md shadow-sm">
-
-        <a href="{{ route('home') }}"
-            class="al-font-display text-2xl font-bold tracking-tight text-[#0B2545] cursor-pointer hover:opacity-70 transition-opacity duration-300">
-            AL<span class="text-[#FF9F45]">.</span>TECHNOLOGY
-        </a>
-
-        <div class="hidden md:flex items-center gap-9 al-font-mono text-xs tracking-[0.15em] text-[#0B2545]/60">
-
-            <div class="relative group">
-                <a href="{{ route('kurumsal') }}"
-                    class="flex items-center gap-1 hover:text-[#0B2545] hover:opacity-100 opacity-70 transition-all duration-300 py-3 cursor-pointer">
-                    KURUMSAL
-                    <svg class="w-3 h-3 transition-transform duration-300 group-hover:rotate-180" fill="none"
-                        stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7" />
-                    </svg>
-                </a>
-
-                <div
-                    class="absolute top-full left-1/2 -translate-x-1/2 pt-2 w-56 opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 ease-out z-50">
-                    <div
-                        class="bg-white/95 backdrop-blur-md border border-[#0B2545]/10 rounded-2xl shadow-xl shadow-[#0B2545]/10 p-3 flex flex-col gap-2">
-                        <a href="{{ route('kurumsal.hakkimizda') }}"
-                            class="al-font-body normal-case tracking-normal text-sm font-semibold text-white text-center bg-[#0B2545] hover:bg-[#2F6FED] transition-colors duration-300 rounded-xl py-3 px-4">Hakkımızda</a>
-                        <a href="{{ route('kurumsal.vizyon-misyon') }}"
-                            class="al-font-body normal-case tracking-normal text-sm font-semibold text-white text-center bg-[#0B2545] hover:bg-[#2F6FED] transition-colors duration-300 rounded-xl py-3 px-4">Vizyon
-                            - Misyon</a>
-                        <a href="{{ route('kurumsal.haberler') }}"
-                            class="al-font-body normal-case tracking-normal text-sm font-semibold text-white text-center bg-[#0B2545] hover:bg-[#2F6FED] transition-colors duration-300 rounded-xl py-3 px-4">Haberler</a>
-                        <a href="{{ route('kurumsal.belgeler') }}"
-                            class="al-font-body normal-case tracking-normal text-sm font-semibold text-white text-center bg-[#0B2545] hover:bg-[#2F6FED] transition-colors duration-300 rounded-xl py-3 px-4">Belgeler</a>
-                    </div>
-                </div>
-            </div>
-
-            <a href="{{ route('referanslar') }}"
-                class="hover:text-[#0B2545] hover:opacity-100 opacity-70 transition-all duration-300">REFERANSLAR</a>
-            <a href="{{ route('urunler') }}"
-                class="hover:text-[#0B2545] hover:opacity-100 opacity-70 transition-all duration-300">ÜRÜNLER</a>
-            <a href="{{ route('magaza') }}"
-                class="hover:text-[#0B2545] hover:opacity-100 opacity-70 transition-all duration-300">MAĞAZA</a>
-        </div>
-
-        <button type="button" onclick="Livewire.dispatch('openQuoteModal')"
-            class="al-font-display bg-[#FF9F45] hover:bg-[#ffb066] hover:opacity-90 hover:scale-[1.03] transition-all duration-300 text-[#0A1830] px-6 py-2.5 rounded-full font-bold text-sm tracking-wide">
-            FİYAT TEKLİFİ AL
-        </button>
-    </nav>
+    <x-site-navbar active="kurumsal" />
 
     <style>
         .al-grid-bg-kurumsal {
@@ -114,7 +65,7 @@
         }
     </style>
 
-    <header class="relative py-24 animate-in overflow-hidden">
+    <header class="relative py-16 sm:py-20 md:py-24 animate-in overflow-hidden">
         <div class="absolute inset-0 al-grid-bg-kurumsal pointer-events-none"></div>
         <div
             class="absolute top-1/3 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#FF9F45]/50 to-transparent k-pulse">
@@ -123,14 +74,14 @@
             class="absolute top-2/3 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#2F6FED]/40 to-transparent k-pulse-delay">
         </div>
 
-        <div class="relative max-w-4xl mx-auto px-6 text-center">
-            <p class="al-font-mono text-xs tracking-[0.3em] text-[#FF9F45] mb-6">KURUMSAL</p>
-            <h1 class="al-font-display text-6xl font-extrabold text-[#0B2545] mb-6">Geleceği Kodluyoruz</h1>
-            <p class="text-xl text-slate-600">AL.TECHNOLOGY, dijital dönüşüm süreçlerinde kurumsal çözüm ortağınız.</p>
+        <div class="relative max-w-4xl mx-auto px-4 sm:px-6 text-center">
+            <p class="al-font-mono text-xs tracking-[0.3em] text-[#FF9F45] mb-4 sm:mb-6">KURUMSAL</p>
+            <h1 class="al-font-display text-4xl sm:text-5xl md:text-6xl font-extrabold text-[#0B2545] mb-4 sm:mb-6 tracking-tight">Geleceği Kodluyoruz</h1>
+            <p class="text-base sm:text-xl text-slate-600 max-w-2xl mx-auto">AL.TECHNOLOGY, dijital dönüşüm süreçlerinde kurumsal çözüm ortağınız.</p>
         </div>
     </header>
 
-    <main class="max-w-6xl mx-auto px-6 pb-24 space-y-24">
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 pb-20 sm:pb-24 space-y-16 sm:space-y-24">
 
 
         <section class="k-fade">
@@ -144,7 +95,7 @@
             </div>
 
             <div
-                class="grid grid-cols-2 md:grid-cols-4 gap-4 bg-white/70 backdrop-blur-sm border border-[#0B2545]/10 rounded-2xl p-8 shadow-sm">
+                class="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 bg-white/70 backdrop-blur-sm border border-[#0B2545]/10 rounded-2xl p-5 sm:p-8 shadow-sm">
                 <div class="text-center">
                     <p class="al-font-display text-4xl font-extrabold text-[#0B2545]">12+</p>
                     <p class="al-font-mono text-[10px] tracking-widest text-[#0B2545]/50 mt-1">YIL DENEYİM</p>
@@ -246,7 +197,7 @@
 
 
         <section>
-            <div class="bg-[#0B2545] rounded-3xl p-10 md:p-16 relative overflow-hidden">
+            <div class="bg-[#0B2545] rounded-3xl p-6 sm:p-10 md:p-16 relative overflow-hidden">
                 <div class="absolute inset-0 pointer-events-none"
                     style="background-image: linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px); background-size: 56px 56px; mask-image: radial-gradient(ellipse 80% 60% at 50% 50%, black 40%, transparent 100%);">
                 </div>
