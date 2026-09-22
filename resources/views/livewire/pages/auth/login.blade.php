@@ -27,7 +27,7 @@ new #[Layout('layouts.guest-plain')] class extends Component
 }; ?>
 
 <div
-    class="al-font-body min-h-screen w-full relative overflow-hidden bg-gradient-to-br from-[#0B2545] via-[#12315F] to-[#0B2545] flex items-center justify-center p-6">
+    class="al-font-body min-h-screen w-full relative overflow-hidden bg-gradient-to-br from-[#0B2545] via-[#12315F] to-[#0B2545] flex items-center justify-center p-4 sm:p-6">
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap');
@@ -144,13 +144,13 @@ new #[Layout('layouts.guest-plain')] class extends Component
 
 
     <a href="{{ route('home') }}"
-        class="absolute top-8 left-8 al-font-display text-2xl font-bold tracking-tight text-white z-30 hover:opacity-80 transition-opacity duration-300">
+        class="absolute top-5 left-5 sm:top-8 sm:left-8 al-font-display text-xl sm:text-2xl font-bold tracking-tight text-white z-30 hover:opacity-80 transition-opacity duration-300">
         AL<span class="text-[#FF9F45]">.</span>TECHNOLOGY
     </a>
 
 
     <div
-        class="absolute top-8 right-8 z-30 hidden sm:flex items-center gap-2 bg-white/5 border border-white/10 backdrop-blur-md rounded-full pl-3 pr-4 py-1.5">
+        class="absolute top-5 right-5 sm:top-8 sm:right-8 z-30 hidden sm:flex items-center gap-2 bg-white/5 border border-white/10 backdrop-blur-md rounded-full pl-3 pr-4 py-1.5">
         <span class="w-2 h-2 rounded-full bg-emerald-400 al-live-dot"></span>
         <span class="al-font-mono text-[10px] tracking-widest text-blue-100/70">SİSTEM AKTİF</span>
     </div>
@@ -175,7 +175,7 @@ new #[Layout('layouts.guest-plain')] class extends Component
     </div>
 
 
-    <div class="relative max-w-6xl w-full flex items-center justify-between gap-16 z-20">
+    <div class="relative max-w-6xl w-full flex items-center justify-between gap-16 z-20 my-auto pt-14 sm:pt-0">
 
         <div class="hidden lg:block text-white space-y-6 max-w-lg login-fade">
             <p class="al-font-mono text-xs tracking-[0.3em] text-[#FF9F45]">HOŞ GELDİNİZ</p>
@@ -188,9 +188,9 @@ new #[Layout('layouts.guest-plain')] class extends Component
             </p>
         </div>
 
-        <div class="w-full max-w-md login-fade login-fade-delay" x-data="{ showPassword: false }">
+        <div class="w-full max-w-md login-fade login-fade-delay mx-auto" x-data="{ showPassword: false }">
             <div
-                class="relative bg-white/95 backdrop-blur-md p-10 rounded-3xl shadow-2xl shadow-black/30 text-[#0B2545] border border-white/50 overflow-hidden">
+                class="relative bg-white/95 backdrop-blur-md p-6 sm:p-10 rounded-2xl sm:rounded-3xl shadow-2xl shadow-black/30 text-[#0B2545] border border-white/50 overflow-hidden">
 
                 <div
                     class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#2F6FED] via-[#FF9F45] to-[#2F6FED]">
@@ -210,12 +210,12 @@ new #[Layout('layouts.guest-plain')] class extends Component
                 </div>
                 @endif
 
-                <div class="text-center mb-8">
-                    <h2 class="al-font-display text-lg font-bold tracking-[0.2em] text-[#0B2545]">AL TECHNOLOGY</h2>
-                    <div class="w-12 h-1 bg-[#FF9F45] mx-auto mt-3 rounded-full"></div>
+                <div class="text-center mb-6 sm:mb-8">
+                    <h2 class="al-font-display text-base sm:text-lg font-bold tracking-[0.2em] text-[#0B2545]">AL TECHNOLOGY</h2>
+                    <div class="w-12 h-1 bg-[#FF9F45] mx-auto mt-2 sm:mt-3 rounded-full"></div>
                 </div>
 
-                <form wire:submit="login" class="space-y-5">
+                <form wire:submit="login" class="space-y-4 sm:space-y-5">
 
                     <div
                         class="al-input-wrap flex items-center gap-3 border-2 border-[#0B2545]/10 rounded-xl px-4 py-3 transition-colors duration-300">
@@ -225,7 +225,7 @@ new #[Layout('layouts.guest-plain')] class extends Component
                                 d="M3 7l9 6 9-6M4 5h16a1 1 0 011 1v12a1 1 0 01-1 1H4a1 1 0 01-1-1V6a1 1 0 011-1z" />
                         </svg>
                         <input wire:model="form.email" type="email" required placeholder="E-posta adresiniz"
-                            class="al-font-body w-full border-0 focus:ring-0 p-0 text-base bg-transparent placeholder:text-[#0B2545]/40">
+                            class="al-font-body w-full border-0 focus:ring-0 p-0 text-sm sm:text-base bg-transparent placeholder:text-[#0B2545]/40 outline-none">
                     </div>
 
                     <div
@@ -237,7 +237,7 @@ new #[Layout('layouts.guest-plain')] class extends Component
                         </svg>
                         <input wire:model="form.password" :type="showPassword ? 'text' : 'password'" required
                             placeholder="Şifreniz"
-                            class="al-font-body w-full border-0 focus:ring-0 p-0 text-base bg-transparent placeholder:text-[#0B2545]/40">
+                            class="al-font-body w-full border-0 focus:ring-0 p-0 text-sm sm:text-base bg-transparent placeholder:text-[#0B2545]/40 outline-none">
                         <button type="button" @click="showPassword = !showPassword"
                             class="shrink-0 text-[#0B2545]/30 hover:text-[#2F6FED] transition-colors duration-300">
                             <svg x-show="!showPassword" class="w-5 h-5" viewBox="0 0 24 24" fill="none"
@@ -254,7 +254,7 @@ new #[Layout('layouts.guest-plain')] class extends Component
                         </button>
                     </div>
 
-                    <div class="flex items-center justify-between text-sm pt-1">
+                    <div class="flex items-center justify-between text-xs sm:text-sm pt-1">
                         <label class="flex items-center gap-2 text-[#0B2545]/60 cursor-pointer select-none">
                             <input wire:model="form.remember" type="checkbox"
                                 class="rounded border-[#0B2545]/20 text-[#2F6FED] focus:ring-[#2F6FED]/40">
@@ -267,12 +267,12 @@ new #[Layout('layouts.guest-plain')] class extends Component
                     </div>
 
                     <button type="submit"
-                        class="al-font-display w-full bg-[#FF9F45] hover:bg-[#ffb066] hover:scale-[1.02] text-[#0A1830] font-bold py-4 rounded-xl transition-all duration-300 text-lg shadow-lg shadow-[#FF9F45]/20 tracking-wide">
+                        class="al-font-display w-full bg-[#FF9F45] hover:bg-[#ffb066] hover:scale-[1.02] text-[#0A1830] font-bold py-3.5 sm:py-4 rounded-xl transition-all duration-300 text-base sm:text-lg shadow-lg shadow-[#FF9F45]/20 tracking-wide cursor-pointer">
                         GİRİŞ YAP
                     </button>
 
                     <a href="{{ route('register') }}" wire:navigate
-                        class="al-font-display block w-full text-center border-2 border-[#0B2545] text-[#0B2545] hover:bg-[#0B2545] hover:text-white font-bold py-4 rounded-xl transition-all duration-300 text-lg tracking-wide">
+                        class="al-font-display block w-full text-center border-2 border-[#0B2545] text-[#0B2545] hover:bg-[#0B2545] hover:text-white font-bold py-3 sm:py-3.5 rounded-xl transition-all duration-300 text-base sm:text-lg tracking-wide">
                         KAYIT OL
                     </a>
                 </form>

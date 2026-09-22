@@ -75,31 +75,40 @@ new #[Layout('layouts.full-livewire')] class extends Component
 }; ?>
 
 <div class="min-h-screen bg-gradient-to-b from-[#EAF4FF] via-[#DCEEFF] to-[#EAF4FF]" style="font-family:'Inter',sans-serif;">
-    <div class="max-w-3xl mx-auto px-6 py-16">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 py-8 sm:py-16">
+
+        <div class="mb-6">
+            <a href="{{ route('magaza') }}" wire:navigate class="inline-flex items-center gap-1.5 text-xs font-semibold text-[#0B2545]/60 hover:text-[#0B2545] transition-colors py-1">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                </svg>
+                Mağazaya Dön
+            </a>
+        </div>
 
         @if ($completed)
-            <div class="bg-white/80 backdrop-blur-sm rounded-3xl p-10 text-center shadow-sm border border-[#0B2545]/10">
+            <div class="bg-white/80 backdrop-blur-sm rounded-2xl sm:rounded-3xl p-6 sm:p-10 text-center shadow-sm border border-[#0B2545]/10">
                 <div class="w-16 h-16 mx-auto mb-5 rounded-full bg-emerald-50 flex items-center justify-center">
                     <svg class="w-8 h-8 text-emerald-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
                     </svg>
                 </div>
-                <h1 class="text-2xl font-bold text-[#0B2545] mb-2" style="font-family:'Space Grotesk',sans-serif;">Siparişiniz alındı</h1>
+                <h1 class="text-xl sm:text-2xl font-bold text-[#0B2545] mb-2" style="font-family:'Space Grotesk',sans-serif;">Siparişiniz alındı</h1>
                 <p class="text-[#0B2545]/60 mb-1">Sipariş numaranız: <span class="font-bold text-[#0B2545]">{{ $orderNumber }}</span></p>
-                <p class="text-[#0B2545]/50 text-sm mb-8">Ekibimiz en kısa sürede sizinle iletişime geçerek siparişinizi onaylayacak.</p>
+                <p class="text-[#0B2545]/50 text-xs sm:text-sm mb-8">Ekibimiz en kısa sürede sizinle iletişime geçerek siparişinizi onaylayacak.</p>
                 <a href="{{ route('home') }}" class="inline-block bg-[#0B2545] hover:bg-[#12315F] text-white font-bold text-sm px-6 py-3 rounded-full transition-colors">
                     Ana Sayfaya Dön
                 </a>
             </div>
         @else
-            <p class="text-xs tracking-[0.3em] text-[#FF9F45] mb-3" style="font-family:'JetBrains Mono',monospace;">ÖDEME</p>
-            <h1 class="text-3xl md:text-4xl font-extrabold text-[#0B2545] mb-10" style="font-family:'Space Grotesk',sans-serif;">Siparişi tamamlayın</h1>
+            <p class="text-xs tracking-[0.3em] text-[#FF9F45] mb-2" style="font-family:'JetBrains Mono',monospace;">ÖDEME</p>
+            <h1 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#0B2545] mb-6 sm:mb-10" style="font-family:'Space Grotesk',sans-serif;">Siparişi tamamlayın</h1>
 
-            <div class="grid md:grid-cols-5 gap-8">
+            <div class="grid md:grid-cols-5 gap-6 sm:gap-8">
                 {{-- Sipariş özeti --}}
                 <div class="md:col-span-2 order-2 md:order-1">
-                    <div class="bg-white/70 backdrop-blur-sm rounded-2xl border border-[#0B2545]/10 p-5 sticky top-8">
-                        <h2 class="text-sm font-bold text-[#0B2545] mb-4 tracking-wide">SİPARİŞ ÖZETİ</h2>
+                    <div class="bg-white/70 backdrop-blur-sm rounded-2xl border border-[#0B2545]/10 p-4 sm:p-5 sticky top-8">
+                        <h2 class="text-xs sm:text-sm font-bold text-[#0B2545] mb-4 tracking-wide">SİPARİŞ ÖZETİ</h2>
                         <div class="space-y-3 mb-5">
                             @foreach ($items as $item)
                             <div class="flex items-center gap-3">
@@ -116,21 +125,21 @@ new #[Layout('layouts.full-livewire')] class extends Component
                         </div>
                         <div class="pt-4 border-t border-[#0B2545]/10 flex items-center justify-between">
                             <span class="text-xs tracking-widest text-[#0B2545]/40" style="font-family:'JetBrains Mono',monospace;">TOPLAM</span>
-                            <span class="text-xl font-bold text-[#0B2545]" style="font-family:'Space Grotesk',sans-serif;">{{ number_format($this->total, 0, ',', '.') }} ₺</span>
+                            <span class="text-lg sm:text-xl font-bold text-[#0B2545]" style="font-family:'Space Grotesk',sans-serif;">{{ number_format($this->total, 0, ',', '.') }} ₺</span>
                         </div>
                     </div>
                 </div>
 
                 {{-- Bilgi formu --}}
                 <div class="md:col-span-3 order-1 md:order-2">
-                    <form wire:submit="tamamla" class="bg-white/70 backdrop-blur-sm rounded-2xl border border-[#0B2545]/10 p-6 space-y-4">
+                    <form wire:submit="tamamla" class="bg-white/70 backdrop-blur-sm rounded-2xl border border-[#0B2545]/10 p-4 sm:p-6 space-y-4">
                         <div>
                             <input wire:model="name" type="text" placeholder="Ad Soyad"
                                    class="w-full border border-[#0B2545]/10 focus:border-[#2F6FED] bg-[#F7F9FC] focus:bg-white rounded-xl px-4 py-3 text-sm outline-none transition-colors">
                             @error('name') <p class="text-red-500 text-xs mt-1">{{ $message }}</p> @enderror
                         </div>
 
-                        <div class="grid grid-cols-2 gap-3">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
                             <div>
                                 <input wire:model="phone" type="text" placeholder="Telefon"
                                        class="w-full border border-[#0B2545]/10 focus:border-[#2F6FED] bg-[#F7F9FC] focus:bg-white rounded-xl px-4 py-3 text-sm outline-none transition-colors">
@@ -155,7 +164,7 @@ new #[Layout('layouts.full-livewire')] class extends Component
                         </div>
 
                         <button type="submit" wire:loading.attr="disabled" wire:target="tamamla"
-                                class="w-full flex items-center justify-center gap-2 bg-[#FF9F45] hover:bg-[#ffb066] disabled:opacity-60 text-[#0A1830] font-bold text-sm py-3.5 rounded-xl transition-all duration-200"
+                                class="w-full flex items-center justify-center gap-2 bg-[#FF9F45] hover:bg-[#ffb066] disabled:opacity-60 text-[#0A1830] font-bold text-sm py-3.5 rounded-xl transition-all duration-200 cursor-pointer shadow-sm active:scale-[0.99]"
                                 style="font-family:'JetBrains Mono',monospace;">
                             <span wire:loading.remove wire:target="tamamla">SİPARİŞİ TAMAMLA</span>
                             <span wire:loading wire:target="tamamla">Gönderiliyor...</span>

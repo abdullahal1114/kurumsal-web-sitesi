@@ -120,16 +120,6 @@
             </div>
         </div>
     </section>
-            <div class="text-center">
-                <p class="counter al-font-display text-4xl font-extrabold text-[#0B2545]" data-target="98">0</p>
-                <p class="al-font-mono text-[10px] tracking-widest text-[#0B2545]/50 mt-1">MÜŞTERİ MEMNUNİYETİ</p>
-            </div>
-            <div class="text-center">
-                <p class="al-font-display text-4xl font-extrabold text-[#0B2545]">24/7</p>
-                <p class="al-font-mono text-[10px] tracking-widest text-[#0B2545]/50 mt-1">TEKNİK DESTEK</p>
-            </div>
-        </div>
-    </section>
 
     <script>
         document.addEventListener("DOMContentLoaded", () => {

@@ -62,86 +62,39 @@
 <div class="min-h-screen bg-gradient-to-b from-[#EAF4FF] via-[#DCEEFF] to-[#EAF4FF] al-font-body text-[#0B2545]">
 
 
-    <nav
-        class="al-navbar sticky top-4 z-50 max-w-6xl mx-auto flex items-center justify-between px-6 md:px-8 py-4 rounded-full  border border-white/60">
-        <a href="{{ route('home') }}"
-            class="al-font-display text-2xl font-bold tracking-tight text-[#0B2545] cursor-pointer hover:opacity-70 transition-opacity duration-300">
-            AL<span class="text-[#FF9F45]">.</span>TECHNOLOGY
-        </a>
+    <x-site-navbar active="haberler" />
 
-        <div class="hidden md:flex items-center gap-9 al-font-mono text-xs tracking-widest text-[#0B2545]/60">
-            <div class="relative group">
-                <a href="{{ route('kurumsal') }}"
-                    class="flex items-center gap-1 hover:text-[#0B2545] hover:opacity-100 opacity-70 transition-all duration-300 py-3 cursor-pointer">
-                    KURUMSAL
-                    <svg class="w-3 h-3 transition-transform duration-300 group-hover:rotate-180" fill="none"
-                        stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7" />
-                    </svg>
-                </a>
-                <div
-                    class="absolute top-full left-1/2 -translate-x-1/2 pt-2 w-56 opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 ease-out z-50">
-                    <div
-                        class="bg-white/95 backdrop-blur-md border border-[#0B2545]/10 rounded-2xl shadow-xl shadow-[#0B2545]/10 p-3 flex flex-col gap-2">
-                        <a href="{{ route('kurumsal.hakkimizda') }}"
-                            class="al-font-body text-sm font-semibold text-white text-center bg-[#0B2545] hover:bg-[#2F6FED] transition-colors duration-300 rounded-xl py-3 px-4">Hakkımızda</a>
-                        <a href="{{ route('kurumsal.vizyon-misyon') }}"
-                            class="al-font-body text-sm font-semibold text-white text-center bg-[#0B2545] hover:bg-[#2F6FED] transition-colors duration-300 rounded-xl py-3 px-4">Vizyon
-                            - Misyon</a>
-                        <a href="{{ route('kurumsal.haberler') }}"
-                            class="al-font-body text-sm font-semibold text-white text-center bg-[#0B2545] hover:bg-[#2F6FED] transition-colors duration-300 rounded-xl py-3 px-4">Haberler</a>
-                        <a href="{{ route('kurumsal.belgeler') }}"
-                            class="al-font-body text-sm font-semibold text-white text-center bg-[#0B2545] hover:bg-[#2F6FED] transition-colors duration-300 rounded-xl py-3 px-4">Belgeler</a>
-                    </div>
-                </div>
-            </div>
-            <a href="{{ route('referanslar') }}"
-                class="hover:text-[#0B2545] hover:opacity-100 opacity-70 transition-all duration-300">REFERANSLAR</a>
-            <a href="{{ route('urunler') }}"
-                class="hover:text-[#0B2545] hover:opacity-100 opacity-70 transition-all duration-300">ÜRÜNLER</a>
-            <a href="{{ route('magaza') }}"
-                class="hover:text-[#0B2545] hover:opacity-100 opacity-70 transition-all duration-300">MAĞAZA</a>
-        </div>
+    <div class="max-w-6xl mx-auto py-10 sm:py-20 px-4 sm:px-6" x-data="{ cat: 'tumu' }">
 
-        <button type="button" onclick="Livewire.dispatch('openQuoteModal')"
-            class="al-font-display bg-[#FF9F45] hover:bg-[#ffb066] hover:opacity-90 hover:scale-[1.03] transition-all duration-300 text-[#0A1830] px-6 py-2.5 rounded-full font-bold text-sm tracking-wide">
-            FİYAT TEKLİFİ AL
-        </button>
-    </nav>
-
-    <div class="max-w-6xl mx-auto py-20 px-6" x-data="{ cat: 'tumu' }">
-
-        <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12">
+        <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-8 sm:mb-12">
             <div>
                 <span class="al-font-mono text-xs text-[#2F6FED] tracking-widest font-bold">GÜNCEL</span>
-                <h1 class="al-font-display text-5xl md:text-6xl font-extrabold mt-2 tracking-tight text-[#0B2545]">
+                <h1 class="al-font-display text-3xl sm:text-5xl md:text-6xl font-extrabold mt-1.5 sm:mt-2 tracking-tight text-[#0B2545]">
                     Teknoloji Gündemi
                 </h1>
-                <p class="al-font-body text-[#0B2545]/60 text-lg max-w-xl mt-4">
+                <p class="al-font-body text-[#0B2545]/60 text-sm sm:text-base md:text-lg max-w-xl mt-2 sm:mt-4">
                     Ürün lansmanları, Ar-Ge başarıları ve şirket içi gelişmeler — AL.TECHNOLOGY'den en taze haberler
                     burada.
                 </p>
             </div>
 
-
-            <div class="flex flex-wrap gap-2 al-font-mono text-[11px] tracking-widest">
+            <div class="flex items-center gap-2 overflow-x-auto no-scrollbar py-1 sm:py-0 sm:flex-wrap al-font-mono text-[11px] tracking-widest -mx-4 px-4 sm:mx-0 sm:px-0">
                 <button type="button" @click="cat = 'tumu'" :class="cat === 'tumu' ? 'active' : 'text-[#0B2545]/60'"
-                    class="al-filter-pill cursor-pointer rounded-full px-4 py-2 border border-[#0B2545]/10 bg-white/70 hover:bg-white">TÜMÜ</button>
+                    class="al-filter-pill whitespace-nowrap shrink-0 cursor-pointer rounded-full px-3.5 sm:px-4 py-2 border border-[#0B2545]/10 bg-white/70 hover:bg-white">TÜMÜ</button>
                 <button type="button" @click="cat = 'altyapi'"
                     :class="cat === 'altyapi' ? 'active' : 'text-[#0B2545]/60'"
-                    class="al-filter-pill cursor-pointer rounded-full px-4 py-2 border border-[#0B2545]/10 bg-white/70 hover:bg-white">ALTYAPI</button>
+                    class="al-filter-pill whitespace-nowrap shrink-0 cursor-pointer rounded-full px-3.5 sm:px-4 py-2 border border-[#0B2545]/10 bg-white/70 hover:bg-white">ALTYAPI</button>
                 <button type="button" @click="cat = 'yapay-zeka'"
                     :class="cat === 'yapay-zeka' ? 'active' : 'text-[#0B2545]/60'"
-                    class="al-filter-pill cursor-pointer rounded-full px-4 py-2 border border-[#0B2545]/10 bg-white/70 hover:bg-white">YAPAY
+                    class="al-filter-pill whitespace-nowrap shrink-0 cursor-pointer rounded-full px-3.5 sm:px-4 py-2 border border-[#0B2545]/10 bg-white/70 hover:bg-white">YAPAY
                     ZEKA</button>
                 <button type="button" @click="cat = 'ar-ge'" :class="cat === 'ar-ge' ? 'active' : 'text-[#0B2545]/60'"
-                    class="al-filter-pill cursor-pointer rounded-full px-4 py-2 border border-[#0B2545]/10 bg-white/70 hover:bg-white">AR-GE</button>
+                    class="al-filter-pill whitespace-nowrap shrink-0 cursor-pointer rounded-full px-3.5 sm:px-4 py-2 border border-[#0B2545]/10 bg-white/70 hover:bg-white">AR-GE</button>
                 <button type="button" @click="cat = 'etkinlik'"
                     :class="cat === 'etkinlik' ? 'active' : 'text-[#0B2545]/60'"
-                    class="al-filter-pill cursor-pointer rounded-full px-4 py-2 border border-[#0B2545]/10 bg-white/70 hover:bg-white">ETKİNLİK</button>
+                    class="al-filter-pill whitespace-nowrap shrink-0 cursor-pointer rounded-full px-3.5 sm:px-4 py-2 border border-[#0B2545]/10 bg-white/70 hover:bg-white">ETKİNLİK</button>
             </div>
         </div>
-
 
         <div
             class="animate-news-card mb-8 relative bg-[#0B2545] rounded-3xl overflow-hidden shadow-xl shadow-[#0B2545]/10 group cursor-pointer">
@@ -149,18 +102,18 @@
             <div
                 class="absolute inset-0 bg-gradient-to-tr from-[#2F6FED]/20 via-transparent to-[#FF9F45]/10 pointer-events-none">
             </div>
-            <div class="relative z-10 p-8 md:p-14 grid grid-cols-1 md:grid-cols-5 gap-8 items-center">
+            <div class="relative z-10 p-5 sm:p-8 md:p-14 grid grid-cols-1 md:grid-cols-5 gap-6 sm:gap-8 items-center">
                 <div class="md:col-span-3">
-                    <div class="flex items-center gap-3 mb-5">
+                    <div class="flex items-center gap-3 mb-3 sm:mb-5">
                         <span
-                            class="al-font-mono text-[11px] tracking-widest font-bold bg-[#FF9F45] text-[#0B2545] rounded-full px-3 py-1">MANŞET</span>
+                            class="al-font-mono text-[10px] sm:text-[11px] tracking-widest font-bold bg-[#FF9F45] text-[#0B2545] rounded-full px-2.5 sm:px-3 py-1">MANŞET</span>
                         <span class="al-font-mono text-xs text-blue-100/50">22.07.2026</span>
                     </div>
                     <h2
-                        class="al-font-display text-3xl md:text-4xl font-extrabold text-white mb-5 leading-tight group-hover:text-[#FF9F45] transition-colors duration-300">
+                        class="al-font-display text-xl sm:text-3xl md:text-4xl font-extrabold text-white mb-3 sm:mb-5 leading-tight group-hover:text-[#FF9F45] transition-colors duration-300">
                         AL.TECHNOLOGY, Ulusal Bulut Girişimi'nde Stratejik Ortak Seçildi
                     </h2>
-                    <p class="text-blue-100/60 leading-relaxed mb-6">
+                    <p class="text-blue-100/70 text-xs sm:text-sm md:text-base leading-relaxed mb-4 sm:mb-6">
                         Kamu ve özel sektöre yönelik yerli bulut altyapısını genişletmeyi hedefleyen ulusal girişim
                         kapsamında, veri egemenliği ve düşük gecikme süresi odaklı çözümlerimizle stratejik ortak olarak
                         seçildik.
@@ -175,7 +128,7 @@
             </div>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
 
             <div x-show="cat === 'tumu' || cat === 'altyapi'" x-transition.opacity.duration.300ms
                 class="animate-news-card bg-white/70 backdrop-blur-md border border-[#0B2545]/10 rounded-3xl overflow-hidden shadow-lg hover:shadow-xl hover:border-[#2F6FED]/30 hover:-translate-y-1 transition-all duration-500 group flex flex-col justify-between">
@@ -431,7 +384,7 @@
         </div>
 
 
-        <div class="mt-24 bg-[#0B2545] rounded-3xl px-8 md:px-14 py-12 relative">
+        <div class="mt-14 sm:mt-24 bg-[#0B2545] rounded-3xl px-5 sm:px-8 md:px-14 py-8 sm:py-12 relative">
             <div class="absolute inset-0 rounded-3xl overflow-hidden pointer-events-none">
                 <div class="absolute inset-0 bg-gradient-to-tr from-[#2F6FED]/15 via-transparent to-[#FF9F45]/10"></div>
             </div>
@@ -439,15 +392,15 @@
                 <div class="text-center md:text-left">
                     <span class="al-font-mono text-xs text-[#FF9F45] tracking-widest font-bold">BÜLTENİMİZE
                         KATILIN</span>
-                    <h3 class="al-font-display text-2xl md:text-3xl font-extrabold text-white mt-2">Haberleri
+                    <h3 class="al-font-display text-xl sm:text-2xl md:text-3xl font-extrabold text-white mt-1.5 sm:mt-2">Haberleri
                         kaçırmayın.</h3>
-                    <p class="text-blue-100/50 text-sm mt-2">Ayda bir, sadece işe yarayan gelişmeler — spam yok.</p>
+                    <p class="text-blue-100/50 text-xs sm:text-sm mt-1.5 sm:mt-2">Ayda bir, sadece işe yarayan gelişmeler — spam yok.</p>
                 </div>
                 <form class="flex w-full md:w-auto gap-3 flex-col sm:flex-row">
                     <input type="email" placeholder="e-posta adresiniz"
                         class="al-font-body text-sm rounded-full px-5 py-3.5 bg-white/10 border border-white/20 text-white placeholder-white/40 focus:outline-none focus:border-[#2F6FED] w-full sm:w-64" />
                     <button type="submit"
-                        class="al-font-mono text-xs tracking-widest font-bold bg-[#FF9F45] hover:bg-[#ffb066] text-[#0B2545] rounded-full px-6 py-3.5 transition-colors duration-300 whitespace-nowrap">
+                        class="w-full sm:w-auto al-font-mono text-xs tracking-widest font-bold bg-[#FF9F45] hover:bg-[#ffb066] text-[#0B2545] rounded-full px-6 py-3.5 transition-colors duration-300 whitespace-nowrap">
                         ABONE OL
                     </button>
                 </form>

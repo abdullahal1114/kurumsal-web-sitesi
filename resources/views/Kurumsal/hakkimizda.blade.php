@@ -85,59 +85,11 @@
 
 
 
-    <nav
-        class="al-navbar sticky top-4 z-50 max-w-6xl mx-auto flex items-center justify-between px-6 md:px-8 py-4 rounded-full mt-4 border border-white/60">
-        <a href="{{ route('home') }}"
-            class="al-font-display text-2xl font-bold tracking-tight text-[#0B2545] cursor-pointer hover:opacity-70 transition-opacity duration-300">
-            AL<span class="text-[#FF9F45]">.</span>TECHNOLOGY
-        </a>
+    <x-site-navbar active="hakkimizda" />
 
-        <div class="hidden md:flex items-center gap-9 al-font-mono text-xs tracking-widest text-[#0B2545]/60">
-            <div class="relative group">
-                <a href="{{ route('kurumsal') }}"
-                    class="flex items-center gap-1 hover:text-[#0B2545] hover:opacity-100 opacity-70 transition-all duration-300 py-3 cursor-pointer">
-                    KURUMSAL
-                    <svg class="w-3 h-3 transition-transform duration-300 group-hover:rotate-180" fill="none"
-                        stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7" />
-                    </svg>
-                </a>
-                <div
-                    class="absolute top-full left-1/2 -translate-x-1/2 pt-2 w-56 opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 ease-out z-50">
-                    <div
-                        class="bg-white/95 backdrop-blur-md border border-[#0B2545]/10 rounded-2xl shadow-xl shadow-[#0B2545]/10 p-3 flex flex-col gap-2">
-                        <a href="{{ route('kurumsal.hakkimizda') }}"
-                            class="al-font-body text-sm font-semibold text-white text-center bg-[#0B2545] hover:bg-[#2F6FED] transition-colors duration-300 rounded-xl py-3 px-4">Hakkımızda</a>
-                        <a href="{{ route('kurumsal.vizyon-misyon') }}"
-                            class="al-font-body text-sm font-semibold text-white text-center bg-[#0B2545] hover:bg-[#2F6FED] transition-colors duration-300 rounded-xl py-3 px-4">Vizyon
-                            - Misyon</a>
-                        <a href="{{ route('kurumsal.haberler') }}"
-                            class="al-font-body text-sm font-semibold text-white text-center bg-[#0B2545] hover:bg-[#2F6FED] transition-colors duration-300 rounded-xl py-3 px-4">Haberler</a>
-                        <a href="{{ route('kurumsal.belgeler') }}"
-                            class="al-font-body text-sm font-semibold text-white text-center bg-[#0B2545] hover:bg-[#2F6FED] transition-colors duration-300 rounded-xl py-3 px-4">Belgeler</a>
-                    </div>
-                </div>
-            </div>
-            <a href="{{ route('referanslar') }}"
-                class="hover:text-[#0B2545] hover:opacity-100 opacity-70 transition-all duration-300">REFERANSLAR</a>
-            <a href="{{ route('urunler') }}"
-                class="hover:text-[#0B2545] hover:opacity-100 opacity-70 transition-all duration-300">ÜRÜNLER</a>
-            <a href="{{ route('magaza') }}"
-                class="hover:text-[#0B2545] hover:opacity-100 opacity-70 transition-all duration-300">MAĞAZA</a>
-        </div>
+    <div class="max-w-6xl mx-auto relative z-10 pt-8 sm:pt-16 pb-16 sm:pb-20 px-4 sm:px-6">
 
-        <button type="button" onclick="Livewire.dispatch('openQuoteModal')"
-            class="al-font-display bg-[#FF9F45] hover:bg-[#ffb066] hover:opacity-90 hover:scale-[1.03] transition-all duration-300 text-[#0A1830] px-6 py-2.5 rounded-full font-bold text-sm tracking-wide">
-            FİYAT TEKLİFİ AL
-        </button>
-    </nav>
-
-
-    <div class="max-w-6xl mx-auto relative z-10 pt-16 pb-20 px-6">
-
-
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start mt-8">
-
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start mt-4 sm:mt-8">
 
             <div class="lg:col-span-7 animate-fade-in-up">
                 <span
@@ -146,7 +98,7 @@
                 </span>
 
                 <h1
-                    class="al-font-display text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-[#0B2545] mt-6 mb-8 leading-tight">
+                    class="al-font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-[#0B2545] mt-4 sm:mt-6 mb-6 sm:mb-8 leading-tight">
                     Yarını Bugünden <br class="hidden sm:block">
                     <span class="text-[#2F6FED] relative inline-block">
                         İnşa Ediyoruz.
@@ -155,15 +107,15 @@
                 </h1>
 
                 <div
-                    class="bg-white/50 backdrop-blur-sm border border-[#0B2545]/10 rounded-3xl p-6 md:p-8 shadow-md hover:border-[#2F6FED]/20 transition-all duration-500 space-y-6">
+                    class="bg-white/50 backdrop-blur-sm border border-[#0B2545]/10 rounded-3xl p-5 sm:p-7 md:p-8 shadow-md hover:border-[#2F6FED]/20 transition-all duration-500 space-y-5 sm:space-y-6">
                     <div class="border-l-4 border-[#FF9F45] pl-4 py-1">
-                        <p class="font-bold text-xl md:text-2xl text-[#0B2545] leading-relaxed">
+                        <p class="font-bold text-lg sm:text-xl md:text-2xl text-[#0B2545] leading-relaxed">
                             AL Technology, dijital ekosistemde kalıcı izler bırakmak ve kurumlara küresel standartlarda
                             teknoloji ortaklığı sunmak amacıyla kuruldu.
                         </p>
                     </div>
 
-                    <div class="space-y-4 text-[#0B2545]/80 text-base md:text-lg leading-relaxed font-normal">
+                    <div class="space-y-4 text-[#0B2545]/80 text-sm sm:text-base md:text-lg leading-relaxed font-normal">
                         <p>
                             Kurulduğumuz ilk günden beri karmaşık altyapı problemlerini yalın, ölçeklenebilir ve güvenli
                             mimarilere dönüştürüyoruz. Sadece kod yazmıyor; işletmelerin verimliliğini artıran,
@@ -192,21 +144,20 @@
                 </div>
             </div>
 
-
             <div class="lg:col-span-5 animate-fade-in-up animate-delay-100 lg:sticky lg:top-28">
                 <div
-                    class="relative group rounded-3xl overflow-hidden shadow-2xl border border-white/50 bg-[#0B2545] aspect-[4/5] min-h-[400px]">
+                    class="relative group rounded-3xl overflow-hidden shadow-2xl border border-white/50 bg-[#0B2545] aspect-[4/3] sm:aspect-[4/5] min-h-[280px] sm:min-h-[400px]">
                     <img src="{{ asset('images/tech-hub.jpg') }}" alt="AL Technology Tech Hub"
                         class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-[1.2s] ease-out opacity-85">
                     <div class="absolute inset-0 bg-gradient-to-t from-[#0B2545] via-[#0B2545]/25 to-transparent"></div>
 
-                    Floating glassmorphic badge
+                    {{-- Floating glassmorphic badge --}}
                     <div
-                        class="absolute bottom-8 left-6 right-6 bg-white/70 backdrop-blur-md border border-white/60 p-6 rounded-2xl shadow-xl hover:-translate-y-1 transition-transform duration-300">
+                        class="absolute bottom-4 sm:bottom-8 left-4 sm:left-6 right-4 sm:right-6 bg-white/75 backdrop-blur-md border border-white/60 p-4 sm:p-6 rounded-2xl shadow-xl hover:-translate-y-1 transition-transform duration-300">
                         <span
-                            class="al-font-mono text-xs font-extrabold text-[#FF9F45] tracking-widest mb-1.5 block">MÜHENDİSLİK
+                            class="al-font-mono text-[11px] sm:text-xs font-extrabold text-[#FF9F45] tracking-widest mb-1 sm:mb-1.5 block">MÜHENDİSLİK
                             GÜCÜ</span>
-                        <h4 class="text-[#0B2545] font-bold text-lg leading-snug">Geleceğin çözümlerini şimdiden
+                        <h4 class="text-[#0B2545] font-bold text-sm sm:text-lg leading-snug">Geleceğin çözümlerini şimdiden
                             kodlayan yetkin ve çevik mühendislik kadrosu.</h4>
                     </div>
                 </div>
@@ -215,16 +166,16 @@
         </div>
 
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-24 animate-fade-in-up animate-delay-200">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-8 mt-14 sm:mt-24 animate-fade-in-up animate-delay-200">
 
             <div
-                class="group bg-white/60 backdrop-blur-sm border border-[#0B2545]/10 rounded-2xl p-8 shadow-sm hover:shadow-xl hover:shadow-[#FF9F45]/5 hover:-translate-y-1 hover:border-[#FF9F45]/30 transition-all duration-300 flex flex-col justify-between">
+                class="group bg-white/60 backdrop-blur-sm border border-[#0B2545]/10 rounded-2xl p-6 sm:p-8 shadow-sm hover:shadow-xl hover:shadow-[#FF9F45]/5 hover:-translate-y-1 hover:border-[#FF9F45]/30 transition-all duration-300 flex flex-col justify-between">
                 <div>
-                    <div class="flex items-center justify-between mb-6">
+                    <div class="flex items-center justify-between mb-5 sm:mb-6">
                         <div
-                            class="w-12 h-12 rounded-xl bg-[#FF9F45]/10 text-[#FF9F45] flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                            SVG İnovasyon
-                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            class="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-[#FF9F45]/10 text-[#FF9F45] flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                            {{-- SVG İnovasyon --}}
+                            <svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M13 10V3L4 14h7v7l9-11h-7z" />
                             </svg>
@@ -232,22 +183,22 @@
                         <span class="al-font-mono text-xs font-bold text-[#0B2545]/30">01 / DEĞER</span>
                     </div>
                     <h3
-                        class="al-font-display text-xl font-bold text-[#0B2545] mb-3 group-hover:text-[#FF9F45] transition-colors duration-300">
+                        class="al-font-display text-lg sm:text-xl font-bold text-[#0B2545] mb-2 sm:mb-3 group-hover:text-[#FF9F45] transition-colors duration-300">
                         Sürekli Ar-Ge</h3>
-                    <p class="text-sm text-[#0B2545]/70 leading-relaxed">Dünyadaki en yeni teknoloji trendlerini ve
+                    <p class="text-xs sm:text-sm text-[#0B2545]/70 leading-relaxed">Dünyadaki en yeni teknoloji trendlerini ve
                         mimari yaklaşımları henüz olgunlaşmadan sistemlerimize entegre ediyoruz.</p>
                 </div>
             </div>
 
 
             <div
-                class="group bg-white/60 backdrop-blur-sm border border-[#0B2545]/10 rounded-2xl p-8 shadow-sm hover:shadow-xl hover:shadow-[#2F6FED]/5 hover:-translate-y-1 hover:border-[#2F6FED]/30 transition-all duration-300 flex flex-col justify-between">
+                class="group bg-white/60 backdrop-blur-sm border border-[#0B2545]/10 rounded-2xl p-6 sm:p-8 shadow-sm hover:shadow-xl hover:shadow-[#2F6FED]/5 hover:-translate-y-1 hover:border-[#2F6FED]/30 transition-all duration-300 flex flex-col justify-between">
                 <div>
-                    <div class="flex items-center justify-between mb-6">
+                    <div class="flex items-center justify-between mb-5 sm:mb-6">
                         <div
-                            class="w-12 h-12 rounded-xl bg-[#2F6FED]/10 text-[#2F6FED] flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                            SVG Güvenilirlik
-                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            class="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-[#2F6FED]/10 text-[#2F6FED] flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                            {{-- SVG Güvenilirlik --}}
+                            <svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                             </svg>
@@ -255,22 +206,22 @@
                         <span class="al-font-mono text-xs font-bold text-[#0B2545]/30">02 / DEĞER</span>
                     </div>
                     <h3
-                        class="al-font-display text-xl font-bold text-[#0B2545] mb-3 group-hover:text-[#2F6FED] transition-colors duration-300">
+                        class="al-font-display text-lg sm:text-xl font-bold text-[#0B2545] mb-2 sm:mb-3 group-hover:text-[#2F6FED] transition-colors duration-300">
                         Sıfır Risk Politikası</h3>
-                    <p class="text-sm text-[#0B2545]/70 leading-relaxed">Veri güvenliğini ve kesintisiz operasyonu şansa
+                    <p class="text-xs sm:text-sm text-[#0B2545]/70 leading-relaxed">Veri güvenliğini ve kesintisiz operasyonu şansa
                         bırakmıyor, her katmanda yedekli mimariler kurguluyoruz.</p>
                 </div>
             </div>
 
 
             <div
-                class="group bg-white/60 backdrop-blur-sm border border-[#0B2545]/10 rounded-2xl p-8 shadow-sm hover:shadow-xl hover:shadow-[#0B2545]/5 hover:-translate-y-1 hover:border-[#0B2545]/30 transition-all duration-300 flex flex-col justify-between">
+                class="group bg-white/60 backdrop-blur-sm border border-[#0B2545]/10 rounded-2xl p-6 sm:p-8 shadow-sm hover:shadow-xl hover:shadow-[#0B2545]/5 hover:-translate-y-1 hover:border-[#0B2545]/30 transition-all duration-300 flex flex-col justify-between">
                 <div>
-                    <div class="flex items-center justify-between mb-6">
+                    <div class="flex items-center justify-between mb-5 sm:mb-6">
                         <div
-                            class="w-12 h-12 rounded-xl bg-[#0B2545]/10 text-[#0B2545] flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                            SVG Şeffaflık
-                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            class="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-[#0B2545]/10 text-[#0B2545] flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                            {{-- SVG Şeffaflık --}}
+                            <svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -280,75 +231,73 @@
                         <span class="al-font-mono text-xs font-bold text-[#0B2545]/30">03 / DEĞER</span>
                     </div>
                     <h3
-                        class="al-font-display text-xl font-bold text-[#0B2545] mb-3 group-hover:text-[#0B2545] transition-colors duration-300">
+                        class="al-font-display text-lg sm:text-xl font-bold text-[#0B2545] mb-2 sm:mb-3 group-hover:text-[#0B2545] transition-colors duration-300">
                         Açık İletişim</h3>
-                    <p class="text-sm text-[#0B2545]/70 leading-relaxed">Projelerimizin her aşamasını ölçülebilir
+                    <p class="text-xs sm:text-sm text-[#0B2545]/70 leading-relaxed">Projelerimizin her aşamasını ölçülebilir
                         metriklerle raporluyor, süreçleri iş ortaklarımıza anlık sunuyoruz.</p>
                 </div>
             </div>
         </div>
 
 
-        <div class="mt-28 animate-fade-in-up animate-delay-300">
-            <p class="al-font-mono text-xs tracking-[0.3em] text-[#FF9F45] mb-3">RAKAMLARLA</p>
-            <h2 class="al-font-display text-3xl md:text-4xl font-extrabold text-[#0B2545] mb-10">
+        <div class="mt-16 sm:mt-28 animate-fade-in-up animate-delay-300">
+            <p class="al-font-mono text-xs tracking-[0.3em] text-[#FF9F45] mb-2 sm:mb-3">RAKAMLARLA</p>
+            <h2 class="al-font-display text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#0B2545] mb-6 sm:mb-10">
                 Büyümemizin Kısa Özeti
             </h2>
             <div
-                class="grid grid-cols-2 md:grid-cols-4 gap-6 bg-white/60 backdrop-blur-md border border-[#0B2545]/10 rounded-3xl p-8 md:p-12 shadow-xl shadow-[#0B2545]/5">
-                <div class="text-center group border-r border-[#0B2545]/5 last:border-none last:pr-0 pr-4 md:pr-0">
+                class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 bg-white/60 backdrop-blur-md border border-[#0B2545]/10 rounded-3xl p-5 sm:p-8 md:p-12 shadow-xl shadow-[#0B2545]/5">
+                <div class="text-center group border-r border-[#0B2545]/10 last:border-none last:pr-0 pr-3 sm:pr-4 md:pr-0">
                     <p
-                        class="al-font-display text-5xl md:text-6xl font-extrabold text-[#0B2545] group-hover:scale-110 transition-transform duration-500 ease-out">
+                        class="al-font-display text-3xl sm:text-5xl md:text-6xl font-extrabold text-[#0B2545] group-hover:scale-110 transition-transform duration-500 ease-out">
                         12+</p>
-                    <p class="al-font-mono text-[11px] tracking-widest text-[#0B2545]/60 mt-3 font-semibold">YIL DENEYİM
+                    <p class="al-font-mono text-[10px] sm:text-[11px] tracking-widest text-[#0B2545]/60 mt-2 sm:mt-3 font-semibold">YIL DENEYİM
                     </p>
                 </div>
-                <div class="text-center group border-r border-[#0B2545]/5 last:border-none last:pr-0 pr-4 md:pr-0">
+                <div class="text-center group md:border-r border-[#0B2545]/10 last:border-none last:pr-0 pr-3 sm:pr-4 md:pr-0">
                     <p
-                        class="al-font-display text-5xl md:text-6xl font-extrabold text-[#2F6FED] group-hover:scale-110 transition-transform duration-500 ease-out">
+                        class="al-font-display text-3xl sm:text-5xl md:text-6xl font-extrabold text-[#2F6FED] group-hover:scale-110 transition-transform duration-500 ease-out">
                         240+</p>
-                    <p class="al-font-mono text-[11px] tracking-widest text-[#0B2545]/60 mt-3 font-semibold">TAMAMLANAN
-                        PROJE</p>
+                    <p class="al-font-mono text-[10px] sm:text-[11px] tracking-widest text-[#0B2545]/60 mt-2 sm:mt-3 font-semibold">TAMAMLANAN PROJE</p>
                 </div>
-                <div class="text-center group border-r border-[#0B2545]/5 last:border-none last:pr-0 pr-4 md:pr-0">
+                <div class="text-center group border-r border-[#0B2545]/10 last:border-none last:pr-0 pr-3 sm:pr-4 md:pr-0 pt-4 md:pt-0 border-t md:border-t-0">
                     <p
-                        class="al-font-display text-5xl md:text-6xl font-extrabold text-[#FF9F45] group-hover:scale-110 transition-transform duration-500 ease-out">
+                        class="al-font-display text-3xl sm:text-5xl md:text-6xl font-extrabold text-[#FF9F45] group-hover:scale-110 transition-transform duration-500 ease-out">
                         40+</p>
-                    <p class="al-font-mono text-[11px] tracking-widest text-[#0B2545]/60 mt-3 font-semibold">UZMAN EKİP
+                    <p class="al-font-mono text-[10px] sm:text-[11px] tracking-widest text-[#0B2545]/60 mt-2 sm:mt-3 font-semibold">UZMAN EKİP
                     </p>
                 </div>
-                <div class="text-center group">
+                <div class="text-center group pt-4 md:pt-0 border-t md:border-t-0 border-[#0B2545]/10">
                     <p
-                        class="al-font-display text-5xl md:text-6xl font-extrabold text-[#0B2545] group-hover:scale-110 transition-transform duration-500 ease-out">
+                        class="al-font-display text-3xl sm:text-5xl md:text-6xl font-extrabold text-[#0B2545] group-hover:scale-110 transition-transform duration-500 ease-out">
                         98%</p>
-                    <p class="al-font-mono text-[11px] tracking-widest text-[#0B2545]/60 mt-3 font-semibold">MÜŞTERİ
-                        MEMNUNİYETİ</p>
+                    <p class="al-font-mono text-[10px] sm:text-[11px] tracking-widest text-[#0B2545]/60 mt-2 sm:mt-3 font-semibold">MÜŞTERİ MEMNUNİYETİ</p>
                 </div>
             </div>
         </div>
 
 
-        <div class="mt-28 animate-fade-in-up animate-delay-400">
-            <p class="al-font-mono text-xs tracking-[0.3em] text-[#FF9F45] mb-3">YOLCULUĞUMUZ</p>
-            <h2 class="al-font-display text-3xl md:text-4xl font-extrabold text-[#0B2545] mb-10">
+        <div class="mt-16 sm:mt-28 animate-fade-in-up animate-delay-400">
+            <p class="al-font-mono text-xs tracking-[0.3em] text-[#FF9F45] mb-2 sm:mb-3">YOLCULUĞUMUZ</p>
+            <h2 class="al-font-display text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#0B2545] mb-6 sm:mb-10">
                 Kısa Bir Zaman Yolculuğu
             </h2>
 
-            <div class="relative pl-10 md:pl-12">
+            <div class="relative pl-6 sm:pl-10 md:pl-12">
 
-                <div class="absolute left-4 md:left-5 top-2 bottom-2 w-0.5 bg-[#0B2545]/15"></div>
+                <div class="absolute left-2.5 sm:left-4 md:left-5 top-2 bottom-2 w-0.5 bg-[#0B2545]/15"></div>
 
 
-                <div class="relative mb-12 group">
+                <div class="relative mb-8 sm:mb-12 group">
 
                     <span
-                        class="absolute left-2 md:left-3 top-1.5 w-4.5 h-4.5 rounded-full bg-white border-4 border-[#FF9F45] shadow-md group-hover:scale-125 transition-transform duration-300 z-10"></span>
-                    <div class="pl-4 ml-3">
-                        <p class="al-font-mono text-xs font-bold text-[#FF9F45] tracking-widest mb-1">KURULUŞ</p>
+                        class="absolute -left-1 sm:left-2 md:left-3 top-1.5 w-3.5 h-3.5 sm:w-4.5 sm:h-4.5 rounded-full bg-white border-[3px] sm:border-4 border-[#FF9F45] shadow-md group-hover:scale-125 transition-transform duration-300 z-10"></span>
+                    <div class="pl-4 sm:pl-4 ml-1 sm:ml-3">
+                        <p class="al-font-mono text-[11px] sm:text-xs font-bold text-[#FF9F45] tracking-widest mb-1">KURULUŞ</p>
                         <h3
-                            class="al-font-display text-xl font-bold text-[#0B2545] mb-2 group-hover:text-[#FF9F45] transition-colors duration-300">
+                            class="al-font-display text-lg sm:text-xl font-bold text-[#0B2545] mb-1.5 sm:mb-2 group-hover:text-[#FF9F45] transition-colors duration-300">
                             İlk adım atıldı</h3>
-                        <p class="text-[#0B2545]/70 text-sm md:text-base leading-relaxed max-w-2xl font-normal">
+                        <p class="text-[#0B2545]/70 text-xs sm:text-sm md:text-base leading-relaxed max-w-2xl font-normal">
                             Küçük bir ekip ve büyük bir vizyonla yola çıktık. İlk projelerimizde yerel işletmelere özel
                             yazılım çözümleri sunarak sektördeki yerimizi almaya başladık.
                         </p>
@@ -356,16 +305,16 @@
                 </div>
 
 
-                <div class="relative mb-12 group">
+                <div class="relative mb-8 sm:mb-12 group">
 
                     <span
-                        class="absolute left-2 md:left-3 top-1.5 w-4.5 h-4.5 rounded-full bg-white border-4 border-[#2F6FED] shadow-md group-hover:scale-125 transition-transform duration-300 z-10"></span>
-                    <div class="pl-4 ml-3">
-                        <p class="al-font-mono text-xs font-bold text-[#2F6FED] tracking-widest mb-1">BÜYÜME</p>
+                        class="absolute -left-1 sm:left-2 md:left-3 top-1.5 w-3.5 h-3.5 sm:w-4.5 sm:h-4.5 rounded-full bg-white border-[3px] sm:border-4 border-[#2F6FED] shadow-md group-hover:scale-125 transition-transform duration-300 z-10"></span>
+                    <div class="pl-4 sm:pl-4 ml-1 sm:ml-3">
+                        <p class="al-font-mono text-[11px] sm:text-xs font-bold text-[#2F6FED] tracking-widest mb-1">BÜYÜME</p>
                         <h3
-                            class="al-font-display text-xl font-bold text-[#0B2545] mb-2 group-hover:text-[#2F6FED] transition-colors duration-300">
+                            class="al-font-display text-lg sm:text-xl font-bold text-[#0B2545] mb-1.5 sm:mb-2 group-hover:text-[#2F6FED] transition-colors duration-300">
                             Bulut altyapısına geçiş</h3>
-                        <p class="text-[#0B2545]/70 text-sm md:text-base leading-relaxed max-w-2xl font-normal">
+                        <p class="text-[#0B2545]/70 text-xs sm:text-sm md:text-base leading-relaxed max-w-2xl font-normal">
                             Artan proje hacmiyle birlikte ekibimizi genişlettik ve bulut tabanlı altyapı çözümlerinde
                             uzmanlaşarak kurumsal müşterilere hizmet vermeye başladık.
                         </p>
@@ -373,17 +322,17 @@
                 </div>
 
 
-                <div class="relative mb-12 group">
+                <div class="relative mb-8 sm:mb-12 group">
 
                     <span
-                        class="absolute left-2 md:left-3 top-1.5 w-4.5 h-4.5 rounded-full bg-white border-4 border-[#0B2545] shadow-md group-hover:scale-125 transition-transform duration-300 z-10"></span>
-                    <div class="pl-4 ml-3">
-                        <p class="al-font-mono text-xs font-bold text-[#0B2545] tracking-widest mb-1">STANDARDİZASYON
+                        class="absolute -left-1 sm:left-2 md:left-3 top-1.5 w-3.5 h-3.5 sm:w-4.5 sm:h-4.5 rounded-full bg-white border-[3px] sm:border-4 border-[#0B2545] shadow-md group-hover:scale-125 transition-transform duration-300 z-10"></span>
+                    <div class="pl-4 sm:pl-4 ml-1 sm:ml-3">
+                        <p class="al-font-mono text-[11px] sm:text-xs font-bold text-[#0B2545] tracking-widest mb-1">STANDARDİZASYON
                         </p>
                         <h3
-                            class="al-font-display text-xl font-bold text-[#0B2545] mb-2 group-hover:text-[#0B2545] transition-colors duration-300">
+                            class="al-font-display text-lg sm:text-xl font-bold text-[#0B2545] mb-1.5 sm:mb-2 group-hover:text-[#0B2545] transition-colors duration-300">
                             Akreditasyon süreçleri</h3>
-                        <p class="text-[#0B2545]/70 text-sm md:text-base leading-relaxed max-w-2xl font-normal">
+                        <p class="text-[#0B2545]/70 text-xs sm:text-sm md:text-base leading-relaxed max-w-2xl font-normal">
                             ISO/IEC 27001 ve ISO 9001 standartlarına uyum sağlayarak süreçlerimizi kurumsallaştırdık,
                             veri güvenliği ve kalite yönetiminde ölçülebilir bir çıta belirledik.
                         </p>
@@ -394,13 +343,13 @@
                 <div class="relative group">
 
                     <span
-                        class="absolute left-2 md:left-3 top-1.5 w-4.5 h-4.5 rounded-full bg-white border-4 border-[#FF9F45] shadow-md group-hover:scale-125 transition-transform duration-300 z-10"></span>
-                    <div class="pl-4 ml-3">
-                        <p class="al-font-mono text-xs font-bold text-[#FF9F45] tracking-widest mb-1">BUGÜN</p>
+                        class="absolute -left-1 sm:left-2 md:left-3 top-1.5 w-3.5 h-3.5 sm:w-4.5 sm:h-4.5 rounded-full bg-white border-[3px] sm:border-4 border-[#FF9F45] shadow-md group-hover:scale-125 transition-transform duration-300 z-10"></span>
+                    <div class="pl-4 sm:pl-4 ml-1 sm:ml-3">
+                        <p class="al-font-mono text-[11px] sm:text-xs font-bold text-[#FF9F45] tracking-widest mb-1">BUGÜN</p>
                         <h3
-                            class="al-font-display text-xl font-bold text-[#0B2545] mb-2 group-hover:text-[#FF9F45] transition-colors duration-300">
+                            class="al-font-display text-lg sm:text-xl font-bold text-[#0B2545] mb-1.5 sm:mb-2 group-hover:text-[#FF9F45] transition-colors duration-300">
                             Geleceğe hazır bir ekip</h3>
-                        <p class="text-[#0B2545]/70 text-sm md:text-base leading-relaxed max-w-2xl font-normal">
+                        <p class="text-[#0B2545]/70 text-xs sm:text-sm md:text-base leading-relaxed max-w-2xl font-normal">
                             Bugün yapay zeka entegrasyonlarından siber güvenliğe, edge computing'den siber-fiziksel
                             sistemlere kadar geniş bir uzmanlık yelpazesiyle müşterilerimizin yanındayız.
                         </p>
@@ -411,7 +360,7 @@
 
 
         <div
-            class="mt-28 bg-[#0B2545] rounded-3xl p-12 md:p-16 text-center relative overflow-hidden animate-fade-in-up animate-delay-400 border border-white/5 shadow-2xl">
+            class="mt-16 sm:mt-28 bg-[#0B2545] rounded-3xl p-6 sm:p-12 md:p-16 text-center relative overflow-hidden animate-fade-in-up animate-delay-400 border border-white/5 shadow-2xl">
             <div class="absolute inset-0 al-grid-bg pointer-events-none opacity-25"></div>
             <div class="absolute -top-12 -left-12 w-48 h-48 rounded-full bg-[#2F6FED]/10 blur-3xl pointer-events-none">
             </div>
@@ -419,16 +368,16 @@
                 class="absolute -bottom-12 -right-12 w-48 h-48 rounded-full bg-[#FF9F45]/10 blur-3xl pointer-events-none">
             </div>
             <div class="relative z-10">
-                <h2 class="al-font-display text-3xl md:text-4xl font-extrabold text-white mb-4 tracking-tight">
+                <h2 class="al-font-display text-2xl sm:text-3xl md:text-4xl font-extrabold text-white mb-3 sm:mb-4 tracking-tight">
                     Bizimle çalışmaya hazır mısınız?
                 </h2>
-                <p class="text-blue-100/70 max-w-xl mx-auto mb-8 text-sm md:text-base leading-relaxed">
+                <p class="text-blue-100/70 max-w-xl mx-auto mb-6 sm:mb-8 text-xs sm:text-sm md:text-base leading-relaxed">
                     İhtiyaçlarınızı dinleyelim, projenize en uygun teknoloji yol haritasını birlikte çıkaralım.
                     Geleceğin altyapısını birlikte kuralım.
                 </p>
 
                 <button type="button" onclick="Livewire.dispatch('openContactModal')"
-                    class="inline-flex items-center gap-2 al-font-mono text-xs font-bold tracking-wider text-[#0B2545] bg-[#FF9F45] hover:bg-white hover:scale-105 transition-all duration-300 rounded-full py-4 px-10 shadow-lg shadow-[#FF9F45]/15">
+                    class="w-full sm:w-auto inline-flex items-center justify-center gap-2 al-font-mono text-xs font-bold tracking-wider text-[#0B2545] bg-[#FF9F45] hover:bg-white hover:scale-105 transition-all duration-300 rounded-full py-3.5 sm:py-4 px-8 sm:px-10 shadow-lg shadow-[#FF9F45]/15">
                     BİZE ULAŞIN
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"

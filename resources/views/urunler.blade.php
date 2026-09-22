@@ -114,54 +114,9 @@
     x-data="{ active: 'all' }">
 
 
-    <nav
-        class="al-navbar sticky top-4 z-50 max-w-6xl mx-auto flex items-center justify-between px-6 md:px-8 py-4 rounded-full border border-white/60">
-        <a href="{{ route('home') }}"
-            class="al-font-display text-2xl font-bold tracking-tight text-[#0B2545] cursor-pointer hover:opacity-70 transition-opacity duration-300">
-            AL<span class="text-[#FF9F45]">.</span>TECHNOLOGY
-        </a>
+    <x-site-navbar active="urunler" />
 
-        <div class="hidden md:flex items-center gap-9 al-font-mono text-xs tracking-widest text-[#0B2545]/60">
-            <div class="relative group">
-                <a href="{{ route('kurumsal') }}"
-                    class="flex items-center gap-1 hover:text-[#0B2545] hover:opacity-100 opacity-70 transition-all duration-300 py-3 cursor-pointer">
-                    KURUMSAL
-                    <svg class="w-3 h-3 transition-transform duration-300 group-hover:rotate-180" fill="none"
-                        stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7" />
-                    </svg>
-                </a>
-                <div
-                    class="absolute top-full left-1/2 -translate-x-1/2 pt-2 w-56 opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 ease-out z-50">
-                    <div
-                        class="bg-white/95 backdrop-blur-md border border-[#0B2545]/10 rounded-2xl shadow-xl shadow-[#0B2545]/10 p-3 flex flex-col gap-2">
-                        <a href="{{ route('kurumsal.hakkimizda') }}"
-                            class="al-font-body text-sm font-semibold text-white text-center bg-[#0B2545] hover:bg-[#2F6FED] transition-colors duration-300 rounded-xl py-3 px-4">Hakkımızda</a>
-                        <a href="{{ route('kurumsal.vizyon-misyon') }}"
-                            class="al-font-body text-sm font-semibold text-white text-center bg-[#0B2545] hover:bg-[#2F6FED] transition-colors duration-300 rounded-xl py-3 px-4">Vizyon
-                            - Misyon</a>
-                        <a href="{{ route('kurumsal.haberler') }}"
-                            class="al-font-body text-sm font-semibold text-white text-center bg-[#0B2545] hover:bg-[#2F6FED] transition-colors duration-300 rounded-xl py-3 px-4">Haberler</a>
-                        <a href="{{ route('kurumsal.belgeler') }}"
-                            class="al-font-body text-sm font-semibold text-white text-center bg-[#0B2545] hover:bg-[#2F6FED] transition-colors duration-300 rounded-xl py-3 px-4">Belgeler</a>
-                    </div>
-                </div>
-            </div>
-            <a href="{{ route('referanslar') }}"
-                class="hover:text-[#0B2545] hover:opacity-100 opacity-70 transition-all duration-300">REFERANSLAR</a>
-            <a href="{{ route('urunler') }}" class="text-[#0B2545] opacity-100">ÜRÜNLER</a>
-            <a href="{{ route('magaza') }}"
-                class="hover:text-[#0B2545] hover:opacity-100 opacity-70 transition-all duration-300">MAĞAZA</a>
-        </div>
-
-        <button type="button" onclick="Livewire.dispatch('openQuoteModal')"
-            class="al-font-display bg-[#FF9F45] hover:bg-[#ffb066] hover:opacity-90 hover:scale-[1.03] transition-all duration-300 text-[#0A1830] px-6 py-2.5 rounded-full font-bold text-sm tracking-wide">
-            FİYAT TEKLİFİ AL
-        </button>
-    </nav>
-
-
-    <header class="relative py-24 md:py-28 px-6 overflow-hidden">
+    <header class="relative py-14 sm:py-24 md:py-28 px-4 sm:px-6 overflow-hidden">
         <div class="absolute inset-0 al-grid-bg pointer-events-none"></div>
         <div
             class="absolute top-1/3 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#FF9F45]/50 to-transparent al-pulse">
@@ -171,12 +126,12 @@
         </div>
 
         <div class="relative max-w-4xl mx-auto text-center p-hero-fade">
-            <p class="al-font-mono text-xs tracking-[0.3em] text-[#FF9F45] mb-6">ÜRÜN KATALOĞU</p>
+            <p class="al-font-mono text-[10px] sm:text-xs tracking-[0.3em] text-[#FF9F45] mb-3 sm:mb-6 uppercase">ÜRÜN KATALOĞU</p>
             <h1
-                class="al-font-display text-5xl md:text-7xl font-extrabold mb-6 leading-[0.98] tracking-tight text-[#0B2545]">
+                class="al-font-display text-3xl sm:text-5xl md:text-7xl font-extrabold mb-4 sm:mb-6 leading-[1.05] sm:leading-[0.98] tracking-tight text-[#0B2545]">
                 Mühendislikle <span class="text-[#2F6FED]">tasarlanan</span> çözümler.
             </h1>
-            <p class="max-w-xl mx-auto text-[#0B2545]/60 text-lg leading-relaxed">
+            <p class="max-w-xl mx-auto text-[#0B2545]/60 text-sm sm:text-lg leading-relaxed">
                 Yazılımdan donanıma, bulut altyapısından siber güvenliğe — işletmenizin
                 ihtiyaç duyduğu her katmanda üretim seviyesinde ürünler.
             </p>
@@ -184,43 +139,43 @@
     </header>
 
 
-    <div class="max-w-5xl mx-auto px-6 mb-14">
-        <div class="flex flex-wrap items-center justify-center gap-3">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 mb-8 sm:mb-14">
+        <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-3">
             <button @click="active = 'all'"
                 :class="active === 'all' ? 'bg-[#0B2545] text-white border-[#0B2545]' : 'bg-white/60 text-[#0B2545]/60 border-[#0B2545]/10 hover:border-[#0B2545]/30'"
-                class="al-font-mono text-xs tracking-widest px-5 py-2.5 rounded-full border transition-all duration-300">
+                class="al-font-mono text-[11px] sm:text-xs tracking-widest px-3.5 sm:px-5 py-2 sm:py-2.5 rounded-full border transition-all duration-300">
                 TÜMÜ
             </button>
             <button @click="active = 'software'"
                 :class="active === 'software' ? 'bg-[#2F6FED] text-white border-[#2F6FED]' : 'bg-white/60 text-[#0B2545]/60 border-[#0B2545]/10 hover:border-[#2F6FED]/40'"
-                class="al-font-mono text-xs tracking-widest px-5 py-2.5 rounded-full border transition-all duration-300">
+                class="al-font-mono text-[11px] sm:text-xs tracking-widest px-3.5 sm:px-5 py-2 sm:py-2.5 rounded-full border transition-all duration-300">
                 YAZILIM
             </button>
             <button @click="active = 'cloud'"
                 :class="active === 'cloud' ? 'bg-[#0B2545] text-white border-[#0B2545]' : 'bg-white/60 text-[#0B2545]/60 border-[#0B2545]/10 hover:border-[#0B2545]/40'"
-                class="al-font-mono text-xs tracking-widest px-5 py-2.5 rounded-full border transition-all duration-300">
+                class="al-font-mono text-[11px] sm:text-xs tracking-widest px-3.5 sm:px-5 py-2 sm:py-2.5 rounded-full border transition-all duration-300">
                 BULUT
             </button>
             <button @click="active = 'security'"
                 :class="active === 'security' ? 'bg-[#D9483F] text-white border-[#D9483F]' : 'bg-white/60 text-[#0B2545]/60 border-[#0B2545]/10 hover:border-[#D9483F]/40'"
-                class="al-font-mono text-xs tracking-widest px-5 py-2.5 rounded-full border transition-all duration-300">
+                class="al-font-mono text-[11px] sm:text-xs tracking-widest px-3.5 sm:px-5 py-2 sm:py-2.5 rounded-full border transition-all duration-300">
                 GÜVENLİK
             </button>
             <button @click="active = 'hardware'"
                 :class="active === 'hardware' ? 'bg-[#FF9F45] text-[#0A1830] border-[#FF9F45]' : 'bg-white/60 text-[#0B2545]/60 border-[#0B2545]/10 hover:border-[#FF9F45]/50'"
-                class="al-font-mono text-xs tracking-widest px-5 py-2.5 rounded-full border transition-all duration-300">
+                class="al-font-mono text-[11px] sm:text-xs tracking-widest px-3.5 sm:px-5 py-2 sm:py-2.5 rounded-full border transition-all duration-300">
                 DONANIM
             </button>
             <button @click="active = 'service'"
                 :class="active === 'service' ? 'bg-[#64748B] text-white border-[#64748B]' : 'bg-white/60 text-[#0B2545]/60 border-[#0B2545]/10 hover:border-[#64748B]/40'"
-                class="al-font-mono text-xs tracking-widest px-5 py-2.5 rounded-full border transition-all duration-300">
+                class="al-font-mono text-[11px] sm:text-xs tracking-widest px-3.5 sm:px-5 py-2 sm:py-2.5 rounded-full border transition-all duration-300">
                 HİZMET
             </button>
         </div>
     </div>
 
-    <section class="max-w-7xl mx-auto px-6 pb-32">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 pb-16 sm:pb-32">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
 
             @php
             $urunler = [
@@ -289,9 +244,9 @@
                     x-transition:enter-end="opacity-100 scale-100"
                     class="p-card group bg-white/70 backdrop-blur-sm border border-[#0B2545]/10 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-500"
                     style="border-left: 3px solid {{ $urun['renk'] }};">
-                    <div class="p-7 flex flex-col h-full">
-                        <div class="flex items-center justify-between mb-5">
-                            <div class="p-badge w-11 h-11 rounded-xl flex items-center justify-center al-font-mono text-xs font-bold text-white shrink-0"
+                    <div class="p-5 sm:p-7 flex flex-col h-full">
+                        <div class="flex items-center justify-between mb-4 sm:mb-5">
+                            <div class="p-badge w-10 h-10 sm:w-11 sm:h-11 rounded-xl flex items-center justify-center al-font-mono text-xs font-bold text-white shrink-0"
                                 style="background-color: {{ $urun['renk'] }};">
                                 {{ $urun['kod'] }}
                             </div>
@@ -302,15 +257,15 @@
                         </div>
 
                         <h3
-                            class="al-font-display text-xl font-bold text-[#0B2545] mb-2 group-hover:text-[#2F6FED] transition-colors duration-300">
+                            class="al-font-display text-lg sm:text-xl font-bold text-[#0B2545] mb-2 group-hover:text-[#2F6FED] transition-colors duration-300">
                             {{ $urun['ad'] }}
                         </h3>
-                        <p class="text-sm text-[#0B2545]/60 leading-relaxed mb-6 flex-grow">
+                        <p class="text-xs sm:text-sm text-[#0B2545]/60 leading-relaxed mb-5 sm:mb-6 flex-grow">
                             {{ $urun['aciklama'] }}
                         </p>
 
                         <div
-                            class="al-font-mono text-[11px] text-[#0B2545]/50 space-y-1.5 mb-6 pt-5 border-t border-[#0B2545]/10">
+                            class="al-font-mono text-[10px] sm:text-[11px] text-[#0B2545]/50 space-y-1.5 mb-5 sm:mb-6 pt-4 sm:pt-5 border-t border-[#0B2545]/10">
                             @foreach($urun['specs'] as $spec)
                             <div class="flex items-center gap-2">
                                 <span class="w-1 h-1 rounded-full shrink-0"
@@ -322,7 +277,7 @@
 
                         <button type="button"
                             @click="Livewire.dispatch('openQuoteModal', { product: @js($urun['ad']), service: @js($kategoriServisEtiketi[$urun['kategori']]) })"
-                            class="p-cta-btn al-font-mono text-xs font-bold text-[#0B2545] group-hover:text-[#2F6FED] flex items-center gap-1.5 transition-colors duration-300">
+                            class="p-cta-btn al-font-mono text-xs font-bold text-[#0B2545] group-hover:text-[#2F6FED] flex items-center gap-1.5 transition-colors duration-300 py-1">
                             TEKLİF AL <span
                                 class="transform group-hover:translate-x-1 transition-transform duration-300">→</span>
                         </button>
@@ -342,8 +297,8 @@
             class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#FF9F45]/50 to-transparent al-pulse">
         </div>
 
-        <div class="relative max-w-7xl mx-auto px-6 md:px-8 pt-20 pb-10">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 md:px-8 pt-12 sm:pt-20 pb-8 sm:pb-10">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 sm:gap-12 mb-10 sm:mb-16">
                 <div class="md:col-span-2">
                     <div class="al-font-display text-2xl font-bold tracking-tight mb-4">
                         AL<span class="text-[#FF9F45]">.</span>TECHNOLOGY
@@ -376,7 +331,7 @@
                 </div>
             </div>
             <div class="pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4">
-                <p class="al-font-mono text-xs text-blue-100/40 tracking-wide">
+                <p class="al-font-mono text-xs text-blue-100/40 tracking-wide text-center md:text-left">
                     © {{ date('Y') }} AL TECHNOLOGY — TÜM HAKLARI SAKLIDIR
                 </p>
             </div>

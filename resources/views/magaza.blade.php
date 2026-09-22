@@ -193,68 +193,9 @@ $sepetAdet = collect(session('sepet', []))->sum('adet');
     }">
 
 
-    <nav
-        class="al-navbar sticky top-4 z-50 max-w-6xl mx-auto flex items-center justify-between px-6 md:px-8 py-4 rounded-full border border-white/60">
-        <a href="{{ route('home') }}"
-            class="al-font-display text-2xl font-bold tracking-tight text-[#0B2545] cursor-pointer hover:opacity-70 transition-opacity duration-300">
-            AL<span class="text-[#FF9F45]">.</span>TECHNOLOGY
-        </a>
+    <x-site-navbar active="magaza" :hasCart="true" />
 
-        <div class="hidden md:flex items-center gap-9 al-font-mono text-xs tracking-widest text-[#0B2545]/60">
-            <div class="relative group">
-                <a href="{{ route('kurumsal') }}"
-                    class="flex items-center gap-1 hover:text-[#0B2545] hover:opacity-100 opacity-70 transition-all duration-300 py-3 cursor-pointer">
-                    KURUMSAL
-                    <svg class="w-3 h-3 transition-transform duration-300 group-hover:rotate-180" fill="none"
-                        stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7" />
-                    </svg>
-                </a>
-                <div
-                    class="absolute top-full left-1/2 -translate-x-1/2 pt-2 w-56 opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 ease-out z-50">
-                    <div
-                        class="bg-white/95 backdrop-blur-md border border-[#0B2545]/10 rounded-2xl shadow-xl shadow-[#0B2545]/10 p-3 flex flex-col gap-2">
-                        <a href="{{ route('kurumsal.hakkimizda') }}"
-                            class="al-font-body text-sm font-semibold text-white text-center bg-[#0B2545] hover:bg-[#2F6FED] transition-colors duration-300 rounded-xl py-3 px-4">Hakkımızda</a>
-                        <a href="{{ route('kurumsal.vizyon-misyon') }}"
-                            class="al-font-body text-sm font-semibold text-white text-center bg-[#0B2545] hover:bg-[#2F6FED] transition-colors duration-300 rounded-xl py-3 px-4">Vizyon
-                            - Misyon</a>
-                        <a href="{{ route('kurumsal.haberler') }}"
-                            class="al-font-body text-sm font-semibold text-white text-center bg-[#0B2545] hover:bg-[#2F6FED] transition-colors duration-300 rounded-xl py-3 px-4">Haberler</a>
-                        <a href="{{ route('kurumsal.belgeler') }}"
-                            class="al-font-body text-sm font-semibold text-white text-center bg-[#0B2545] hover:bg-[#2F6FED] transition-colors duration-300 rounded-xl py-3 px-4">Belgeler</a>
-                    </div>
-                </div>
-            </div>
-            <a href="{{ route('referanslar') }}"
-                class="hover:text-[#0B2545] hover:opacity-100 opacity-70 transition-all duration-300">REFERANSLAR</a>
-            <a href="{{ route('urunler') }}"
-                class="hover:text-[#0B2545] hover:opacity-100 opacity-70 transition-all duration-300">ÜRÜNLER</a>
-            <a href="{{ route('magaza') }}" class="text-[#0B2545] opacity-100">MAĞAZA</a>
-        </div>
-
-        <div class="flex items-center gap-3">
-            
-            <button type="button" @click="Livewire.dispatch('cart-open')"
-                class="relative w-11 h-11 rounded-full bg-white/70 border border-[#0B2545]/10 flex items-center justify-center hover:bg-white transition-colors duration-300">
-                <svg :class="bump ? 'm-cart-bump' : ''" class="w-5 h-5 text-[#0B2545]" fill="none" stroke="currentColor"
-                    viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 1.94-4.752 2.442-7.303a1.125 1.125 0 00-1.11-1.322H5.106M7.5 14.25L5.106 5.165M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
-                </svg>
-                <span x-show="$store.cart.count > 0" x-cloak x-text="$store.cart.count"
-                    class="absolute -top-1 -right-1 w-5 h-5 rounded-full bg-[#D9483F] text-white text-[10px] font-bold flex items-center justify-center al-font-mono"></span>
-            </button>
-
-            <button type="button" onclick="Livewire.dispatch('openQuoteModal')"
-                class="al-font-display bg-[#FF9F45] hover:bg-[#ffb066] hover:opacity-90 hover:scale-[1.03] transition-all duration-300 text-[#0A1830] px-6 py-2.5 rounded-full font-bold text-sm tracking-wide">
-                FİYAT TEKLİFİ AL
-            </button>
-        </div>
-    </nav>
-
-
-    <header class="relative py-24 md:py-28 px-6 overflow-hidden">
+    <header class="relative py-14 sm:py-24 md:py-28 px-4 sm:px-6 overflow-hidden">
         <div class="absolute inset-0 al-grid-bg pointer-events-none"></div>
         <div
             class="absolute top-1/3 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#FF9F45]/50 to-transparent m-pulse">
@@ -264,12 +205,12 @@ $sepetAdet = collect(session('sepet', []))->sum('adet');
         </div>
 
         <div class="relative max-w-4xl mx-auto text-center m-hero-fade">
-            <p class="al-font-mono text-xs tracking-[0.3em] text-[#FF9F45] mb-6">MAĞAZA</p>
+            <p class="al-font-mono text-[10px] sm:text-xs tracking-[0.3em] text-[#FF9F45] mb-3 sm:mb-6 uppercase">MAĞAZA</p>
             <h1
-                class="al-font-display text-5xl md:text-7xl font-extrabold mb-6 leading-[0.98] tracking-tight text-[#0B2545]">
+                class="al-font-display text-3xl sm:text-5xl md:text-7xl font-extrabold mb-4 sm:mb-6 leading-[1.05] sm:leading-[0.98] tracking-tight text-[#0B2545]">
                 Stoktan <span class="text-[#2F6FED]">hazır</span> teknoloji.
             </h1>
-            <p class="max-w-xl mx-auto text-[#0B2545]/60 text-lg leading-relaxed">
+            <p class="max-w-xl mx-auto text-[#0B2545]/60 text-sm sm:text-lg leading-relaxed">
                 Kurumunuz için ihtiyaç duyduğunuz donanım, lisans ve aksesuarlar —
                 stoktan hemen teslim, tek tıkla sepete.
             </p>
@@ -277,43 +218,43 @@ $sepetAdet = collect(session('sepet', []))->sum('adet');
     </header>
 
 
-    <div class="max-w-5xl mx-auto px-6 mb-14">
-        <div class="flex flex-wrap items-center justify-center gap-3">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 mb-8 sm:mb-14">
+        <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-3">
             <button @click="active = 'all'"
                 :class="active === 'all' ? 'bg-[#0B2545] text-white border-[#0B2545]' : 'bg-white/60 text-[#0B2545]/60 border-[#0B2545]/10 hover:border-[#0B2545]/30'"
-                class="al-font-mono text-xs tracking-widest px-5 py-2.5 rounded-full border transition-all duration-300">
+                class="al-font-mono text-[11px] sm:text-xs tracking-widest px-3.5 sm:px-5 py-2 sm:py-2.5 rounded-full border transition-all duration-300">
                 TÜMÜ
             </button>
             <button @click="active = 'sunucu'"
                 :class="active === 'sunucu' ? 'bg-[#FF9F45] text-[#0A1830] border-[#FF9F45]' : 'bg-white/60 text-[#0B2545]/60 border-[#0B2545]/10 hover:border-[#FF9F45]/50'"
-                class="al-font-mono text-xs tracking-widest px-5 py-2.5 rounded-full border transition-all duration-300">
+                class="al-font-mono text-[11px] sm:text-xs tracking-widest px-3.5 sm:px-5 py-2 sm:py-2.5 rounded-full border transition-all duration-300">
                 SUNUCU
             </button>
             <button @click="active = 'ag'"
                 :class="active === 'ag' ? 'bg-[#0B2545] text-white border-[#0B2545]' : 'bg-white/60 text-[#0B2545]/60 border-[#0B2545]/10 hover:border-[#0B2545]/40'"
-                class="al-font-mono text-xs tracking-widest px-5 py-2.5 rounded-full border transition-all duration-300">
+                class="al-font-mono text-[11px] sm:text-xs tracking-widest px-3.5 sm:px-5 py-2 sm:py-2.5 rounded-full border transition-all duration-300">
                 AĞ EKİPMANI
             </button>
             <button @click="active = 'guvenlik'"
                 :class="active === 'guvenlik' ? 'bg-[#D9483F] text-white border-[#D9483F]' : 'bg-white/60 text-[#0B2545]/60 border-[#0B2545]/10 hover:border-[#D9483F]/40'"
-                class="al-font-mono text-xs tracking-widest px-5 py-2.5 rounded-full border transition-all duration-300">
+                class="al-font-mono text-[11px] sm:text-xs tracking-widest px-3.5 sm:px-5 py-2 sm:py-2.5 rounded-full border transition-all duration-300">
                 GÜVENLİK
             </button>
             <button @click="active = 'lisans'"
                 :class="active === 'lisans' ? 'bg-[#2F6FED] text-white border-[#2F6FED]' : 'bg-white/60 text-[#0B2545]/60 border-[#0B2545]/10 hover:border-[#2F6FED]/40'"
-                class="al-font-mono text-xs tracking-widest px-5 py-2.5 rounded-full border transition-all duration-300">
+                class="al-font-mono text-[11px] sm:text-xs tracking-widest px-3.5 sm:px-5 py-2 sm:py-2.5 rounded-full border transition-all duration-300">
                 LİSANS
             </button>
             <button @click="active = 'aksesuar'"
                 :class="active === 'aksesuar' ? 'bg-[#64748B] text-white border-[#64748B]' : 'bg-white/60 text-[#0B2545]/60 border-[#0B2545]/10 hover:border-[#64748B]/40'"
-                class="al-font-mono text-xs tracking-widest px-5 py-2.5 rounded-full border transition-all duration-300">
+                class="al-font-mono text-[11px] sm:text-xs tracking-widest px-3.5 sm:px-5 py-2 sm:py-2.5 rounded-full border transition-all duration-300">
                 AKSESUAR
             </button>
         </div>
     </div>
 
-    <section class="max-w-7xl mx-auto px-6 pb-32">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 pb-16 sm:pb-32">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
 
             @php
             $urunler = [
@@ -376,9 +317,9 @@ $sepetAdet = collect(session('sepet', []))->sum('adet');
                 </div>
                 @endif
 
-                <div class="p-7 flex flex-col h-full">
-                    <div class="flex items-center justify-between mb-5">
-                        <div class="m-badge w-11 h-11 rounded-xl flex items-center justify-center al-font-mono text-[10px] font-bold text-white shrink-0"
+                <div class="p-5 sm:p-7 flex flex-col h-full">
+                    <div class="flex items-center justify-between mb-4 sm:mb-5">
+                        <div class="m-badge w-10 h-10 sm:w-11 sm:h-11 rounded-xl flex items-center justify-center al-font-mono text-[10px] font-bold text-white shrink-0"
                             style="background-color: {{ $urun['renk'] }};">
                             {{ $urun['kod'] }}
                         </div>
@@ -389,15 +330,15 @@ $sepetAdet = collect(session('sepet', []))->sum('adet');
                     </div>
 
                     <h3
-                        class="al-font-display text-xl font-bold text-[#0B2545] mb-2 group-hover:text-[#2F6FED] transition-colors duration-300">
+                        class="al-font-display text-lg sm:text-xl font-bold text-[#0B2545] mb-2 group-hover:text-[#2F6FED] transition-colors duration-300">
                         {{ $urun['ad'] }}
                     </h3>
-                    <p class="text-sm text-[#0B2545]/60 leading-relaxed mb-6 flex-grow">
+                    <p class="text-xs sm:text-sm text-[#0B2545]/60 leading-relaxed mb-5 sm:mb-6 flex-grow">
                         {{ $urun['aciklama'] }}
                     </p>
 
                     <div
-                        class="al-font-mono text-[11px] text-[#0B2545]/50 space-y-1.5 mb-6 pt-5 border-t border-[#0B2545]/10">
+                        class="al-font-mono text-[10px] sm:text-[11px] text-[#0B2545]/50 space-y-1.5 mb-5 sm:mb-6 pt-4 sm:pt-5 border-t border-[#0B2545]/10">
                         @foreach($urun['specs'] as $spec)
                         <div class="flex items-center gap-2">
                             <span class="w-1 h-1 rounded-full shrink-0"
@@ -407,14 +348,14 @@ $sepetAdet = collect(session('sepet', []))->sum('adet');
                         @endforeach
                     </div>
 
-                    <div class="flex items-end justify-between mb-5">
+                    <div class="flex items-end justify-between mb-4 sm:mb-5">
                         <div>
                             @if($urun['eskiFiyat'])
-                            <p class="al-font-mono text-xs text-[#0B2545]/40 line-through mb-0.5">
+                            <p class="al-font-mono text-[11px] sm:text-xs text-[#0B2545]/40 line-through mb-0.5">
                                 {{ number_format($urun['eskiFiyat'], 0, ',', '.') }} ₺
                             </p>
                             @endif
-                            <p class="al-font-display text-2xl font-extrabold text-[#0B2545]">
+                            <p class="al-font-display text-xl sm:text-2xl font-extrabold text-[#0B2545]">
                                 {{ number_format($urun['fiyat'], 0, ',', '.') }} ₺
                             </p>
                         </div>
@@ -477,8 +418,8 @@ $sepetAdet = collect(session('sepet', []))->sum('adet');
             class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#FF9F45]/50 to-transparent m-pulse">
         </div>
 
-        <div class="relative max-w-7xl mx-auto px-6 md:px-8 pt-20 pb-10">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 md:px-8 pt-12 sm:pt-20 pb-8 sm:pb-10">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 sm:gap-12 mb-10 sm:mb-16">
                 <div class="md:col-span-2">
                     <div class="al-font-display text-2xl font-bold tracking-tight mb-4">
                         AL<span class="text-[#FF9F45]">.</span>TECHNOLOGY
@@ -511,7 +452,7 @@ $sepetAdet = collect(session('sepet', []))->sum('adet');
                 </div>
             </div>
             <div class="pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4">
-                <p class="al-font-mono text-xs text-blue-100/40 tracking-wide">
+                <p class="al-font-mono text-xs text-blue-100/40 tracking-wide text-center md:text-left">
                     © {{ date('Y') }} AL TECHNOLOGY — TÜM HAKLARI SAKLIDIR
                 </p>
             </div>
