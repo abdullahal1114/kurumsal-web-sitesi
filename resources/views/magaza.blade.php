@@ -312,7 +312,7 @@ $sepetAdet = collect(session('sepet', []))->sum('adet');
                 style="border-left: 3px solid {{ $urun['renk'] }};">
                 @if($urun['eskiFiyat'])
                 <div
-                    class="m-shine absolute top-3 right-5 z-10 bg-[#D9483F]  text-white text-[10px] font-bold al-font-mono tracking-widest px-3 py-1.5 rounded-full overflow-hidden">
+                    class="m-shine absolute top-3 right-5 z-10 bg-[#D9483F]  text-white text-[10px] font-bold al-font-mono tracking-widest px-3 py-1.5 rounded-full overflow-hidden max-md:top-1 right-2">
                     %{{ round((1 - $urun['fiyat'] / $urun['eskiFiyat']) * 100) }} İNDİRİM
                 </div>
                 @endif

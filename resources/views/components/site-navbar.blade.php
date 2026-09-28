@@ -186,7 +186,7 @@
                 @click="mobileOpen = false"
                 class="flex items-center justify-between py-3 px-3.5 rounded-2xl font-bold text-sm transition-all duration-200 {{ $active === 'referanslar' ? 'bg-[#0B2545] text-white' : 'text-[#0B2545]/80 hover:bg-[#0B2545]/5' }}">
                 <span class="al-font-mono tracking-wider text-xs">REFERANSLAR</span>
-                <span class="text-xs opacity-60">→</span>
+                <span class="text-xs opacity-60"></span>
             </a>
 
             {{-- Ürünler Link --}}
@@ -194,7 +194,7 @@
                 @click="mobileOpen = false"
                 class="flex items-center justify-between py-3 px-3.5 rounded-2xl font-bold text-sm transition-all duration-200 {{ $active === 'urunler' ? 'bg-[#0B2545] text-white' : 'text-[#0B2545]/80 hover:bg-[#0B2545]/5' }}">
                 <span class="al-font-mono tracking-wider text-xs">ÜRÜNLER</span>
-                <span class="text-xs opacity-60">→</span>
+                <span class="text-xs opacity-60"></span>
             </a>
 
             {{-- Mağaza Link --}}
@@ -202,7 +202,7 @@
                 @click="mobileOpen = false"
                 class="flex items-center justify-between py-3 px-3.5 rounded-2xl font-bold text-sm transition-all duration-200 {{ $active === 'magaza' ? 'bg-[#0B2545] text-white' : 'text-[#0B2545]/80 hover:bg-[#0B2545]/5' }}">
                 <span class="al-font-mono tracking-wider text-xs">MAĞAZA</span>
-                <span class="text-xs opacity-60">→</span>
+                <span class="text-xs opacity-60"></span>
             </a>
         </div>
 
